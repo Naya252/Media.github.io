@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <!-- map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Бриллианты Костромы</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#main" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#catalog" class="nav__link">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#delivery" class="nav__link">Примерка и доставка</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#production" class="nav__link">Производство</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contacts" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <div class="main">
+            <div class="desc">
+                <div class="desc__name">
+                    <p>Pusets</p>
+                </div>
+                <div class="desc__description">
+                    <div class="desc__wrap">
+                        <div class="desc__info">
+                            <h1>Пусеты</h1>
+                            <div class="desc__p">
+                                <p>С бриллиантами и</p>
+                                <p>драгоценными камнями</p>
+                            </div>                   
+                            <a href="#" class="btn">Подобрать</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>            
+            <div class="pic">
+                <div class="pic__wrap">
+                    <div class="pic__img">
+                        <img class="pic__img_pict" src="img/1.jpg" alt="">                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div id="catalog" class="container">
+        <div class="wrapper pt column">
+            <div class="descriptions">
+                <h2>Специально для вас</h2>
+                <p>Мы собрали для вас лучшее из нашей коллекции</p>
+            </div>
+            <div class="catalog__cards">
+                <div id="catalog__card" class="catalog__card">
+                    <div id="catalogClass" class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image88.jpg" alt="2778-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>2778-10 Пусеты</h3>
+                            <p>Золото, бриллианты 66 шт. 0,368ct, </p>
+                            <p>сапфир 8 шт., турмалин 2 шт.</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>203 720.-</p>
+                        </div> 
+                        <a id="catalogBtn" href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div> 
+                </div>
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image89.jpg" alt="2804-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>2804-10 Пусеты</h3>
+                            <p>Золото, бриллианты 8 шт. 0,219ct, опал</p>
+                            <p>10 шт. 4,47ct</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>71 730.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image90.jpg" alt="0109/3-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>0109/3-10 Пусеты</h3>
+                            <p>Золото, брилианты 2 шт. 0,219ct, рубин</p>
+                            <p>54 шт. 0,474ct</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>70 820.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image91.jpg" alt="0057-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>0057-10 Пусеты</h3>
+                            <p>Золото, бриллианты 90 шт.</p>
+                            <p>0,545ct | 3/4</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>63 800.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>               
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image92.jpg" alt="0053-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>0053-10 Пусеты</h3>
+                            <p>Золото, бриллианты 2 шт.</p>
+                            <p>0,204ct | 3/5</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>41 460.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image93.jpg" alt="0101/6-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>0101/6-10 Пусеты</h3>
+                            <p>Золото, бриллианты 30 шт.</p>
+                            <p>0,134ct, танзанит 2 шт. 1,19ct</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>39 470.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image94.jpg" alt="0025-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>0025-10 Пусеты</h3>
+                            <p>Золото, бриллианты 2 шт.</p>
+                            <p>0,197ct  | 3/3</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>37 850.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>
+                <div class="catalog__card">
+                    <div class="catalog__card_item">
+                        <div class="catalog__card_pic">
+                            <img src="img/image95.jpg" alt="0043-10 Пусеты">
+                        </div>
+                        <div class="catalog__card_desc">
+                            <h3>0043-10 Пусеты</h3>
+                            <p>Золото, бриллианты 14 шт. 0,356ct | 3/5</p>
+                        </div>                        
+                    </div>
+                    <div class="catalog__card_order">
+                        <div class="catalog__card_price">
+                            <p>35 895.-</p>
+                        </div> 
+                        <a href="#" class="catalog__card_btn">Примерить</a>                           
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__vector">
+                <p>Еще</p>
+                <div class="arrow">
+                    <img src="img/vector3.png" alt="=>">
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div id="delivery" class="container">
+        <div class="wrapper pt column">
+            <div class="descriptions">
+                <h2>Примерка и доставка</h2>
+                <p>Мы сделали все, чтобы вам было удобно и приятно выбирать</p>
+            </div>
+            <div class="delivery__cards">
+                <div class="delivery__card">
+                    <div class="delivery__img">
+                        <img src="img/earrings.png" alt="earrings">
+                    </div>
+                    <div class="delivery__text">
+                        <h3>Примерка</h3>
+                        <p>
+                            Наш курьер привезет вам понравившиеся украшения и вы сможете их примерить в комфортной обстановке. Украшения, которые вам не подойдут курьер заберет с собой.
+                        </p>
+                    </div>
+                </div>
+                <div class="delivery__card">
+                    <div class="delivery__img">
+                        <img src="img/group.png" alt="delivery">
+                    </div>
+                    <div class="delivery__text">
+                        <h3>Доставка</h3>
+                        <p>
+                            Доставка осуществялется службой “Pony Express” в пункты выдачи и курьером на дом. Курьер свяжется с Вами для уточнения время и места доставки. Примерный срок доставки 7 рабочих дней.
+                        </p>
+                    </div>
+                </div>
+                <div class="delivery__card">
+                    <div class="delivery__img">
+                        <img src="img/pay.png" alt="pay">
+                    </div>
+                    <div class="delivery__text">
+                        <h3>Оплата</h3>
+                        <p>
+                            Оплата производиться при получении товара двумя удобными вам способами:<br> – наличный расчет<br> – банковская карта
+                        </p>
+                    </div>
+                </div>
+                <div class="delivery__card">
+                    <div class="delivery__img">
+                        <img src="img/label.png" alt="assurance">
+                    </div>
+                    <div class="delivery__text">
+                        <h3>Гарантии</h3>
+                        <p>
+                            Украшения ювелирного завода “Брилианнты Костромы” имеют все необходимые пометки о подлинности: 
+                        </p>
+                        <div class="data">
+                            <p data-tooltip="Всплывающая подсказка" class="tooltip">i</p>
+                            <p class="delivery__text_info info">Бирку</p>
+                        </div>
+                        
+                        <p class="delivery__text_info info">Именник</p>
+                        <p class="delivery__text_info info">Пробирное клеймо</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>       
+    </div>
+    <div id="about">
+        <!-- <div class="wrapper pt">
+
+        </div>        -->
+    </div>
+    <div id="production">
+        <!-- <div class="wrapper pt">
+
+        </div>        -->
+    </div>
+    <div id="contacts" class="container column">
+        <div class=" contacts pt2">
+            <div class="cont">
+                <div  class="contacts__desc">
+                    <div class="contacts__desc_wrap">
+                        
+                        <div class="contacts__desc_bg">
+                            <p class="bg">Pusets</p>
+
+                            <div class="contacts__desc_text">
+                                <h2>Контакты</h2>
+                                <div class="contacts__desc_p">
+                                    <p>+7 (4942) 42-20-23</p>
+                                    <p>info@best-brilliant.ru</p>
+                                </div>
+                                <div class="contacts__desc_p">
+                                    <p>156019, г. Кострома,<br> ул. Локомотивная, д. 2 ж </p>
+                                    <div class="contacts__desc_link">
+                                        <a href="#">Основной сайт</a>
+                                        <div class="arrow">
+                                            <img src="img/vector3.png" alt="=>">
+                                        </div>
+                                    </div>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mapid" class="contacts__desc_map">
+                            
+                        </div>
+                    </div>                   
+                </div>
+                <div class="contacts__question">
+                    <div class="contacts__question_wrap">
+                        <div class="contacts__question_form">
+                            <h2>Есть вопросы?</h2>
+                        </div>
+                        
+                    </div>                    
+                </div>                
+            </div>
+        </div>       
+    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="foo">
+                
+            </div>
+        </div>
+    </footer> 
+    <script src="js/script.js"></script>  
+</body>
+</html>
