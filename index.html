@@ -341,7 +341,36 @@
                     <div class="contacts__question">
                         <div class="contacts__question_wrap">
                             <div class="contacts__question_form">
-                                <h2>Есть вопросы?</h2>
+                                <label class="contacts__question_mainLabel">
+                                    Есть вопросы?
+                                </label>
+                                <form id="contacts__form" class="contacts__form" method="post">
+                                    <div class="box-input">
+                                        <input class="input" type="text" id="name" name="name" placeholder=" " required>
+                                        <label for="name">Имя</label>
+                                    </div>
+                                    <div class="box-input">
+                                        <input class="input" type="email" id="email" name="email" placeholder=" "
+                                            required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="box-input">
+                                        <textarea class="input" name="text" id="text" cols="30" rows="1" placeholder=" "
+                                        required></textarea>
+                                        <label for="text">Сообщение</label>
+                                    </div>
+
+                                    <div class="recover">
+                                        <input type="checkbox" id="ckbox" name="ckbox" required>
+                                        <label for="ckbox">Принимаю соглашение об обработке персональных данных</a></label>
+                                    </div>
+                                    <div class="recover">
+                                        <input type="checkbox" id="ckbox2" name="ckbox2">
+                                        <label for="ckbox2">Хочу получать рекламную рассылку “Бриллианты Костромы”</a></label>
+                                    </div>
+                                    
+                                    <input id="btnForm" type="submit" value="Отправить" class="button">   
+                                </form>
                             </div>
                         </div>
                     </div>

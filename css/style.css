@@ -162,7 +162,7 @@ header {
     .pic .pic__img .pic__img_pict {
       width: 100%; }
 
-.btn {
+.btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm {
   font-family: "Playfair Display", serif;
   border: 1px solid #DD7D5C;
   background: #DD7D5C;
@@ -172,10 +172,10 @@ header {
   margin-left: 5px;
   box-shadow: 5px 5px 0 1px white, 5px 5px 0 2px #DD7D5C, -5px -5px 0 1px white, -5px -5px 0 2px #DD7D5C;
   transition: box-shadow .5s ease, filter .5s ease; }
-  .btn:hover {
+  .btn:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover {
     filter: contrast(150%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C; }
-  .btn:active {
+  .btn:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active {
     filter: contrast(300%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C, 0 0 0 2px #DD7D5C inset, 0 0 0 4px white inset; }
 
@@ -371,7 +371,6 @@ header {
               font-size: 18em;
               position: absolute;
               top: 20%;
-              z-index: 2;
               margin: 0; }
             #contacts .contacts .cont .contacts__desc .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text {
               max-width: 615px;
@@ -404,20 +403,111 @@ header {
             height: 200px; }
       #contacts .contacts .cont .contacts__question {
         width: 46%;
-        height: 560px;
+        max-height: 560px;
         height: 100%;
-        background: #FCF9F7; }
+        background: #FCF9F7;
+        position: relative;
+        z-index: 2; }
         #contacts .contacts .cont .contacts__question .contacts__question_wrap {
           max-width: 765px;
           width: 90%;
           height: 560px;
           margin-right: auto; }
         #contacts .contacts .cont .contacts__question .contacts__question_form {
-          max-width: 615px;
+          max-width: 460px;
           width: 34em;
           padding-top: 4.27em;
-          margin: 0 auto;
-          text-align: center; }
+          margin: 0 auto; }
+          #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__question_mainLabel {
+            font-size: 2em;
+            font-family: "Playfair Display", serif;
+            color: #403637;
+            font-weight: bold;
+            line-height: 50px; }
+          #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form {
+            padding-left: .6em;
+            margin-top: 2em;
+            /* ╨Я╨╗╨░╨▓╨░╤О╤Й╨╕╨╣ ╤В╨╡╨║╤Б╤В */
+            /* ╨Р╨╜╨╕╨╝╨╕╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╤З╨╡╨║╨▒╨╛╨║╤Б */ }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .input {
+              display: block;
+              width: 100%;
+              font-size: 16px;
+              border: none;
+              border-bottom: 1px solid #987A6E;
+              padding: 12px 14px;
+              box-sizing: border-box;
+              margin-bottom: 22px;
+              color: #403637;
+              outline: none; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form textarea {
+              overflow: auto; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input {
+              position: relative; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea {
+              border: none;
+              border-bottom: 1px solid #987A6E;
+              padding: 10px 0;
+              background: inherit;
+              max-width: 386px; }
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus {
+                border-bottom-color: #403637; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input label {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding-top: 10px;
+              color: #987A6E;
+              transition: .5s;
+              pointer-events: none; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus ~ label,
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus ~ label,
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:valid ~ label,
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:valid ~ label {
+              top: -20px;
+              font-size: 12px;
+              color: #CBA696; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover {
+              padding-left: .6em;
+              margin-top: 15px;
+              font-size: 10px; }
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox'],
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2'] {
+                cursor: pointer;
+                padding-left: 1.75em;
+                width: 100%;
+                display: block;
+                position: relative; }
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox']::before,
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2']::before {
+                content: '';
+                position: absolute;
+                border: 1px solid #CBA696;
+                width: 10px;
+                height: 10px;
+                top: -2px;
+                left: 0;
+                transition: .2s; }
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:checked + label::before,
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked + label::before {
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-right: 2px solid #987A6E;
+                border-bottom: 2px solid #987A6E;
+                transform: rotate(40deg);
+                width: 6px;
+                height: 11px;
+                transform-origin: 100% 100%;
+                top: -4px;
+                left: -5px; }
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:not(:checked),
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:not(:checked),
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:checked,
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked {
+                display: none; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm {
+              margin-top: 2em;
+              outline: none; }
 
 footer {
   background: #E8D4C9;
