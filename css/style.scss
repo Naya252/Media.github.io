@@ -48,7 +48,9 @@ h1, h2, h3, p {
 }
 
 a {
-    text-decoration: none;    
+    text-decoration: none; 
+    outline: none; 
+    -webkit-tap-highlight-color: transparent;  
 }
 
 ul, li {
@@ -420,71 +422,60 @@ header {
         }
 
         .data{
+            margin-top: 5px;
+            margin-bottom: 5px;
             padding-top: 0;
             display: flex;
             align-items: center;
-            position: relative;
             height: 1.11em;
             p{
                 display: inline-flex;
             }
 
-            .tooltip{
-                font-size: 8px;
-                color: $infoColor;
-                background: $infoBg;
-                // padding: 0 5px;
-                // width: 11px;
-                // height: 11px;
+            .toggletip-container {
+                position: relative;
+                display: inline-block;
+              }
+              
+              /* the bubble element, added inside the toggletip live region */
+              
+              .toggletip-bubble {
+                display: inline-block;
                 position: absolute;
-                top: 0;
-                left: 0;
-                align-self: flex-start;
-                // text-align: center;
+                right: 0%;
+                top: 100%;
+                width: 200px;
+                padding: 1em;
+                background: $catalogBtnColor;
+                color: $infoColor;
+                font-size: .7em;
+                line-height: 18px;
+                z-index: 4;
+              }
+              
+              button {
+                width: .5em;
+                padding-right: 7px;
+                padding-left: 5px;
+                height: 1.4em;
+                font-size: .5em;
+                border: 0;
+                background: $infoBg;
+                font-weight: 600;
+                color: $infoColor;
+                border: 1px solid $infoBg;
+              } 
+              
+              button:focus {
+                outline: none;
+                background: $catalogBtnColor;
+              }
+
+              .delivery__text_info{            
+                padding-left: 1em;
             }
         }
 
-        .delivery__text_info{
-            padding-top: 0;
-            padding-left: 1.5em;
-        }
-
-        [data-tooltip] {
-            position: relative; /* Относительное позиционирование */ 
-           }
-           [data-tooltip]::after {
-            content: attr(data-tooltip); /* Выводим текст */
-            position: absolute; /* Абсолютное позиционирование */
-            width: 300px; /* Ширина подсказки */
-            left: 0; top: 0; /* Положение подсказки */
-            background: #3989c9; /* Синий цвет фона */
-            color: #fff; /* Цвет текста */
-            padding: 0.5em; /* Поля вокруг текста */
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
-            pointer-events: none; /* Подсказка */
-            opacity: 0; /* Подсказка невидима */
-            transition: 1s; /* Время появления подсказки */
-           } 
-           [data-tooltip]:hover::after {
-            opacity: 1; /* Показываем подсказку */
-            top: 2em; /* Положение подсказки */
-           }
-
-        // .info {
-        //     position: relative;
-
-        //     &::after{
-        //         content: "i";
-        //         display: block;
-        //         width: .7em;
-        //         height: .7em;
-        //         cursor: pointer;
-        //         position: absolute;
-        //         top: 5px;
-        //         left: 0;
-        //         border: 1px solid black;
-        //     }
-        // }
     }
 }
 

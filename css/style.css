@@ -27,7 +27,9 @@ h1, h2, h3, p {
   padding: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; }
 
 ul, li {
   display: flex;
@@ -290,56 +292,46 @@ header {
       color: #403637;
       padding-top: 5px; }
     .delivery__cards .delivery__card .data {
+      margin-top: 5px;
+      margin-bottom: 5px;
       padding-top: 0;
       display: flex;
       align-items: center;
-      position: relative;
-      height: 1.11em; }
+      height: 1.11em;
+      /* the bubble element, added inside the toggletip live region */ }
       .delivery__cards .delivery__card .data p {
         display: inline-flex; }
-      .delivery__cards .delivery__card .data .tooltip {
-        font-size: 8px;
-        color: #CBA696;
-        background: #E8D4C9;
+      .delivery__cards .delivery__card .data .toggletip-container {
+        position: relative;
+        display: inline-block; }
+      .delivery__cards .delivery__card .data .toggletip-bubble {
+        display: inline-block;
         position: absolute;
-        top: 0;
-        left: 0;
-        align-self: flex-start; }
-    .delivery__cards .delivery__card .delivery__text_info {
-      padding-top: 0;
-      padding-left: 1.5em; }
-    .delivery__cards .delivery__card [data-tooltip] {
-      position: relative;
-      /* ╨Ю╤В╨╜╨╛╤Б╨╕╤В╨╡╨╗╤М╨╜╨╛╨╡ ╨┐╨╛╨╖╨╕╤Ж╨╕╨╛╨╜╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ */ }
-    .delivery__cards .delivery__card [data-tooltip]::after {
-      content: attr(data-tooltip);
-      /* ╨Т╤Л╨▓╨╛╨┤╨╕╨╝ ╤В╨╡╨║╤Б╤В */
-      position: absolute;
-      /* ╨Р╨▒╤Б╨╛╨╗╤О╤В╨╜╨╛╨╡ ╨┐╨╛╨╖╨╕╤Ж╨╕╨╛╨╜╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ */
-      width: 300px;
-      /* ╨и╨╕╤А╨╕╨╜╨░ ╨┐╨╛╨┤╤Б╨║╨░╨╖╨║╨╕ */
-      left: 0;
-      top: 0;
-      /* ╨Я╨╛╨╗╨╛╨╢╨╡╨╜╨╕╨╡ ╨┐╨╛╨┤╤Б╨║╨░╨╖╨║╨╕ */
-      background: #3989c9;
-      /* ╨б╨╕╨╜╨╕╨╣ ╤Ж╨▓╨╡╤В ╤Д╨╛╨╜╨░ */
-      color: #fff;
-      /* ╨ж╨▓╨╡╤В ╤В╨╡╨║╤Б╤В╨░ */
-      padding: 0.5em;
-      /* ╨Я╨╛╨╗╤П ╨▓╨╛╨║╤А╤Г╨│ ╤В╨╡╨║╤Б╤В╨░ */
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */
-      pointer-events: none;
-      /* ╨Я╨╛╨┤╤Б╨║╨░╨╖╨║╨░ */
-      opacity: 0;
-      /* ╨Я╨╛╨┤╤Б╨║╨░╨╖╨║╨░ ╨╜╨╡╨▓╨╕╨┤╨╕╨╝╨░ */
-      transition: 1s;
-      /* ╨Т╤А╨╡╨╝╤П ╨┐╨╛╤П╨▓╨╗╨╡╨╜╨╕╤П ╨┐╨╛╨┤╤Б╨║╨░╨╖╨║╨╕ */ }
-    .delivery__cards .delivery__card [data-tooltip]:hover::after {
-      opacity: 1;
-      /* ╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╨╡╨╝ ╨┐╨╛╨┤╤Б╨║╨░╨╖╨║╤Г */
-      top: 2em;
-      /* ╨Я╨╛╨╗╨╛╨╢╨╡╨╜╨╕╨╡ ╨┐╨╛╨┤╤Б╨║╨░╨╖╨║╨╕ */ }
+        right: 0%;
+        top: 100%;
+        width: 200px;
+        padding: 1em;
+        background: #FDFBFA;
+        color: #CBA696;
+        font-size: .7em;
+        line-height: 18px;
+        z-index: 4; }
+      .delivery__cards .delivery__card .data button {
+        width: .5em;
+        padding-right: 7px;
+        padding-left: 5px;
+        height: 1.4em;
+        font-size: .5em;
+        border: 0;
+        background: #E8D4C9;
+        font-weight: 600;
+        color: #CBA696;
+        border: 1px solid #E8D4C9; }
+      .delivery__cards .delivery__card .data button:focus {
+        outline: none;
+        background: #FDFBFA; }
+      .delivery__cards .delivery__card .data .delivery__text_info {
+        padding-left: 1em; }
 
 #contacts {
   overflow: hidden; }
