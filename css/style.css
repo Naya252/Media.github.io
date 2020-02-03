@@ -103,6 +103,10 @@ header {
           transition: opacity 1s ease; }
         header .nav .nav__list .nav__item .nav__link:hover::after {
           opacity: 1; }
+        header .nav .nav__list .nav__item .nav__link:focus::after {
+          opacity: 1; }
+      header .nav .nav__list .nav__item .active {
+        color: aqua; }
 
 .container {
   height: 100%; }
@@ -167,7 +171,7 @@ header {
     .pic .pic__img .pic__img_pict {
       width: 100%; }
 
-.btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
+.btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
   font-family: "Playfair Display", serif;
   border: 1px solid #DD7D5C;
   background: #DD7D5C;
@@ -177,10 +181,10 @@ header {
   margin-left: 5px;
   box-shadow: 5px 5px 0 1px white, 5px 5px 0 2px #DD7D5C, -5px -5px 0 1px white, -5px -5px 0 2px #DD7D5C;
   transition: box-shadow .5s ease, filter .5s ease; }
-  .btn:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover, .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:hover {
+  .btn:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:hover {
     filter: contrast(150%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C; }
-  .btn:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active, .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:active {
+  .btn:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:active {
     filter: contrast(300%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C, 0 0 0 2px #DD7D5C inset, 0 0 0 4px white inset; }
 
@@ -451,6 +455,7 @@ header {
               border-bottom: 1px solid #987A6E;
               padding: 10px 0;
               background: inherit;
+              background: #FCF9F7;
               max-width: 386px; }
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus {
                 border-bottom-color: #403637; }
@@ -530,174 +535,173 @@ header {
   pointer-events: none;
   margin: 0;
   padding: 0;
-  z-index: 9999999; }
+  z-index: 9999999;
+  /* -----  ╨Т╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╨╡ ╨┐╨╛ ╤Б╨╡╤А╨╡╨┤╨╕╨╜╨╡  -----*/ }
   .catalogMod:target {
     opacity: 1;
     /* ╨▓╨╛╨╖╨▓╤А╨░╤Й╨░╨╡╨╝ ╤Н╨╗╨╡╨╝╨╡╨╜╤В╤Г ╤Б╨╛╨▒╤Л╤В╨╕╨╣╨╜╨╛╤Б╤В╤М ╨╝╤Л╤И╨╕ */
     pointer-events: auto; }
-
-/* -----  ╨Т╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╨╡ ╨┐╨╛ ╤Б╨╡╤А╨╡╨┤╨╕╨╜╨╡  -----*/
-.catalogMod__wrap {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 9999999999; }
-  .catalogMod__wrap .catalogMod__container {
-    max-width: 747px;
-    width: 100%;
-    height: 30.2em;
-    max-height: 484px;
-    width: 45.38em;
-    background-color: #FFFFFF;
-    padding: 30px 20px 40px;
-    margin: auto;
+  .catalogMod .catalogMod__wrap {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    filter: none; }
-    .catalogMod__wrap .catalogMod__container .close {
-      position: relative; }
-      .catalogMod__wrap .catalogMod__container .close #close {
-        width: 22px;
-        height: 22px;
-        color: #987A6E;
-        font-size: 55px;
-        font-weight: 100;
-        line-height: 0;
-        position: absolute;
-        top: 0%;
-        right: 0;
-        z-index: 99999999; }
-        .catalogMod__wrap .catalogMod__container .close #close:hover {
-          color: #fc0000; }
-        .catalogMod__wrap .catalogMod__container .close #close p {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9999999999; }
+    .catalogMod .catalogMod__wrap .catalogMod__container {
+      max-width: 747px;
+      width: 100%;
+      height: 30.2em;
+      max-height: 484px;
+      width: 45.38em;
+      background-color: #FFFFFF;
+      padding: 30px 20px 40px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      filter: none; }
+      .catalogMod .catalogMod__wrap .catalogMod__container .close {
+        position: relative; }
+        .catalogMod .catalogMod__wrap .catalogMod__container .close #close {
+          width: 22px;
+          height: 22px;
+          color: #987A6E;
+          font-size: 55px;
+          font-weight: 100;
+          line-height: 0;
           position: absolute;
-          top: 50%;
-          left: 0;
+          top: 0%;
+          right: 0;
           z-index: 99999999; }
-    .catalogMod__wrap .catalogMod__container .catalogMod__content {
-      margin: 0 20px; }
-    .catalogMod__wrap .catalogMod__container .catalogMod__title {
-      color: #987A6E;
-      font-family: "Montserrat", sans-serif;
-      margin-bottom: 40px; }
-      .catalogMod__wrap .catalogMod__container .catalogMod__title h2 {
-        font-size: 1.11em;
-        line-height: 24px; }
-      .catalogMod__wrap .catalogMod__container .catalogMod__title p {
-        font-size: .77em; }
-    .catalogMod__wrap .catalogMod__container .catalogMod__container_elems {
-      display: flex; }
-      .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem {
-        width: 50%;
-        max-height: 404px; }
-        .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item {
-          padding: 0;
-          width: 277px;
-          margin-right: auto;
-          max-height: 404px; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_pic {
-            width: 277px;
-            height: 277px; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_pic img {
-              width: 99%; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc {
-            width: 100%; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc h3 {
-              font-weight: 600;
-              font-size: .88em;
-              border-bottom: 1px solid #CBA696; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc p {
-              font-size: .77em;
-              padding-top: 10px;
-              line-height: 20px; }
-        .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form {
-          max-width: 255px;
-          margin: 0 40px 0 auto;
-          max-height: 404px;
-          height: 100%;
-          /* ╨Я╨╗╨░╨▓╨░╤О╤Й╨╕╨╣ ╤В╨╡╨║╤Б╤В */
-          /* ╤З╨╡╨║╨▒╨╛╨║╤Б */ }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form {
-            display: inline-flex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: space-between; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .inputMod {
-            display: block;
-            width: 100%;
-            font-size: .88em;
-            border: none;
-            border-bottom: 1px solid #987A6E;
-            padding: 12px 14px;
-            box-sizing: border-box;
-            margin-bottom: 12px;
-            color: #403637;
-            outline: none; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input {
-            position: relative; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input {
-            border: none;
-            border-bottom: 1px solid #987A6E;
-            padding: 25px 0 8px;
-            background: inherit;
-            max-width: 386px; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus {
-              border-bottom-color: #403637; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input label {
+          .catalogMod .catalogMod__wrap .catalogMod__container .close #close:hover {
+            color: #fc0000; }
+          .catalogMod .catalogMod__wrap .catalogMod__container .close #close p {
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 0;
-            padding-top: 30px;
-            color: #987A6E;
-            transition: .5s;
-            pointer-events: none;
-            font-size: .88em; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus ~ label,
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input textarea:focus ~ label,
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:valid ~ label,
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input textarea:valid ~ label {
-            top: -20px;
-            font-size: .66em;
-            color: #CBA696; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover {
-            padding-left: .6em;
-            margin-top: 12px;
-            font-size: .44em; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckboxMod'],
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckbox2Mod'] {
-              cursor: pointer;
-              padding-left: 2em;
-              width: 100%;
+            z-index: 99999999; }
+      .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__content {
+        margin: 0 20px; }
+      .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__title {
+        color: #987A6E;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 40px; }
+        .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__title h2 {
+          font-size: 1.11em;
+          line-height: 24px; }
+        .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__title p {
+          font-size: .77em; }
+      .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems {
+        display: flex; }
+        .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem {
+          width: 50%;
+          max-height: 404px; }
+          .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item {
+            padding: 0;
+            width: 277px;
+            margin-right: auto;
+            max-height: 404px; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_pic {
+              width: 277px;
+              height: 277px; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_pic img {
+                width: 99%; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc {
+              width: 100%; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc h3 {
+                font-weight: 600;
+                font-size: .88em;
+                border-bottom: 1px solid #CBA696; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc p {
+                font-size: .77em;
+                padding-top: 10px;
+                line-height: 20px; }
+          .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form {
+            max-width: 255px;
+            margin: 0 40px 0 auto;
+            max-height: 404px;
+            height: 100%;
+            /* ╨Я╨╗╨░╨▓╨░╤О╤Й╨╕╨╣ ╤В╨╡╨║╤Б╤В */
+            /* ╤З╨╡╨║╨▒╨╛╨║╤Б */ }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form {
+              display: inline-flex;
+              flex-direction: column;
+              height: 100%;
+              justify-content: space-between; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .inputMod {
               display: block;
+              width: 100%;
+              font-size: .88em;
+              border: none;
+              border-bottom: 1px solid #987A6E;
+              padding: 12px 14px;
+              box-sizing: border-box;
+              margin-bottom: 12px;
+              color: #403637;
+              outline: none; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input {
               position: relative; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckboxMod']::before,
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckbox2Mod']::before {
-              content: '\2713';
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input {
+              border: none;
+              border-bottom: 1px solid #987A6E;
+              padding: 25px 0 8px;
+              background: inherit;
+              max-width: 386px; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus {
+                border-bottom-color: #403637; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input label {
               position: absolute;
-              border: 1px solid #CBA696;
-              color: white;
-              width: 10px;
-              height: 10px;
-              font-size: 10px;
-              top: -4px;
+              top: 0;
               left: 0;
-              transition: .2s; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked + label::before,
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked + label::before {
-              background: #CBA696;
-              color: white; }
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:not(:checked),
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:not(:checked),
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked,
-            .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked {
-              display: none; }
-          .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
-            margin-top: 2em;
-            outline: none;
-            align-self: flex-end; }
+              padding-top: 30px;
+              color: #987A6E;
+              transition: .5s;
+              pointer-events: none;
+              font-size: .88em; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus ~ label,
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input textarea:focus ~ label,
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:valid ~ label,
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input textarea:valid ~ label {
+              top: -20px;
+              font-size: .66em;
+              color: #CBA696; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover {
+              padding-left: .6em;
+              margin-top: 12px;
+              font-size: .44em; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckboxMod'],
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckbox2Mod'] {
+                cursor: pointer;
+                padding-left: 2em;
+                width: 100%;
+                display: block;
+                position: relative; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckboxMod']::before,
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckbox2Mod']::before {
+                content: '\2713';
+                position: absolute;
+                border: 1px solid #CBA696;
+                color: white;
+                width: 10px;
+                height: 10px;
+                font-size: 10px;
+                top: -4px;
+                left: 0;
+                transition: .2s; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked + label::before,
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked + label::before {
+                background: #CBA696;
+                color: white; }
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:not(:checked),
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:not(:checked),
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked,
+              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked {
+                display: none; }
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
+              margin-top: 2em;
+              outline: none;
+              align-self: flex-end; }
 
 footer {
   background: #E8D4C9;

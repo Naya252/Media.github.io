@@ -149,6 +149,14 @@ header {
                     &:hover::after{
                         opacity: 1;    
                     }
+
+                    &:focus::after{
+                        opacity: 1;    
+                    }
+                }
+
+                .active {
+                    color: aqua;
                 }
             }   
         }         
@@ -639,6 +647,7 @@ header {
                             border-bottom: $borderBottom;
                             padding: 10px 0;
                             background: inherit;
+                            background: #FCF9F7;
                             max-width: 386px;
 
                             &:focus{
@@ -758,10 +767,8 @@ header {
             pointer-events: auto;
 
         }
-    }
 
-
-    /* -----  Выравнивание по середине  -----*/
+        /* -----  Выравнивание по середине  -----*/
     .catalogMod__wrap {
         display: flex;
         height: 100vh;
@@ -989,10 +996,8 @@ header {
 
             }      
         }
-    }
-
-
-    
+    }   
+}
 
 
 footer{
