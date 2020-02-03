@@ -873,23 +873,27 @@ header {
                     }
 
                     .catalogMod__form{
-                        @extend .contacts__question_form;
                         max-width: 255px;
-                        margin: auto;
+                        margin: 0 40px 0 auto; 
+                        max-height: 404px;
+                        height: 100%;
 
                         .catalog__form{
-                            @extend .contacts__form;
+                            display: inline-flex;
+                            flex-direction: column;
+                            height: 100%;
+                            justify-content: space-between;
                         }
 
                         .inputMod {
                             display: block;
                             width: 100%;
-                            font-size: 16px;
+                            font-size: .88em;
                             border: none;
                             border-bottom: $borderBottom;
                             padding: 12px 14px;
                             box-sizing: border-box;
-                            margin-bottom: 22px;
+                            margin-bottom: 12px;
                             color: $mainTextColor;
                             outline: none;
                         }
@@ -902,7 +906,7 @@ header {
                         .box-input input {
                             border: none;
                             border-bottom: $borderBottom;
-                            padding: 10px 0;
+                            padding: 25px 0 8px;
                             background: inherit;
                             max-width: 386px;
 
@@ -915,10 +919,11 @@ header {
                             position: absolute;
                             top: 0;
                             left: 0;
-                            padding-top: 10px;
+                            padding-top: 30px;
                             color:$catalogTextColor;
                             transition: .5s;
                             pointer-events: none;
+                            font-size: .88em;
                         }
 
                         .box-input input:focus~label,
@@ -926,20 +931,20 @@ header {
                         .box-input input:valid~label,
                         .box-input textarea:valid~label{
                             top: -20px;
-                            font-size: 12px;
+                            font-size: .66em;
                             color: $infoColor;                           
                         }
 
-                        /* Анимированный чекбокс */
+                        /* чекбокс */
                         .recover {
                             padding-left: .6em;;
-                            margin-top: 15px;
-                            font-size: 10px; 
+                            margin-top: 12px;
+                            font-size: .44em; 
                             
                             label[for='ckboxMod'],
                             label[for='ckbox2Mod'] {
                                 cursor: pointer;
-                                padding-left: 1.75em;
+                                padding-left: 2em;
                                 width: 100%;
                                 display: block;
                                 position: relative;
@@ -947,28 +952,22 @@ header {
 
                             label[for='ckboxMod']::before,
                             label[for='ckbox2Mod']::before {
-                                content: '';
+                                content: '\2713';
                                 position: absolute;
                                 border: $catlogBorder;
+                                color:rgba($color: #ffffff, $alpha: 1);
                                 width: 10px;
                                 height: 10px;
-                                top: -2px;
+                                font-size: 10px;
+                                top: -4px;
                                 left: 0;
                                 transition: .2s;
                             }
 
                             #ckboxMod:checked+label::before,
-                            #ckbox2Mod:checked+label::before {
-                                border-top: 2px solid transparent;
-                                border-left: 2px solid transparent;
-                                border-right: 2px solid $catalogTextColor;
-                                border-bottom: 2px solid $catalogTextColor;
-                                transform: rotate(40deg);
-                                width: 6px;
-                                height: 11px;
-                                transform-origin: 100% 100%;
-                                top: -4px;
-                                left: -5px;
+                            #ckbox2Mod:checked+label::before { 
+                                background: $infoColor;
+                                color:rgba($color: #ffffff, $alpha: 1.0);
                             }
 
                             #ckboxMod:not(:checked),
@@ -983,6 +982,7 @@ header {
                             @extend .btn;
                             margin-top: 2em;
                             outline: none;
+                            align-self: flex-end;
                         }
 
 
