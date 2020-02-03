@@ -76,7 +76,7 @@ close.onclick = function () {
   }());
 
 
-  
+
 //map
 var mymap = L.map('mapid').setView([57.757401, 40.986840], 15.5);
 var myMarker = L.icon({
@@ -130,12 +130,12 @@ function WidthChange(mq) {
 	}	
 }
 
-// плавная прокрутка 
-const anchors = document.querySelectorAll('a[href*="#"]');
+// // плавная прокрутка 
+const anchors = document.querySelectorAll('a.nav__link[href*="#"]');
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault()
+    e.preventDefault();
     
     const blockID = anchor.getAttribute('href').substr(1);
     
