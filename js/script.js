@@ -18,18 +18,19 @@ catalogCard.onmouseout = function () {
 //пример модального окна
 let catalogMod = document.getElementById('catalogMod');
 let close = document.getElementById('close');
+let BlurContent = document.getElementById('BlurContent');
 
 // Открываем модальное окно 
 catalogBtn.onclick = function () {
     catalogBtn.setAttribute("href", "#catalogMod"); 
     document.body.style.overflow = "hidden";
-    // document.body.classList.add("blur");
+    BlurContent.classList.add("blur");
 };
 // Закрываем модальное окно 
 close.onclick = function () {
     catalogBtn.removeAttribute("href"); 
     document.body.style.overflow = null;
-    // document.body.classList.remove("blur");
+    BlurContent.classList.remove("blur");
 };
 
 

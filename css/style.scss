@@ -40,15 +40,12 @@ $pt1920: 9.38em;
 body {
     font-family: $font1;
     font-size: $fs1920;
+    // filter: blur(5px);
 }
 
-// .blur{
-//     -ms-filter: blur(5px);
-//     -webkit-filter: blur(5px);
-//     -moz-filter: blur(5px);
-//     -o-filter: blur(5px);
-//     filter: blur(5px); 
-// }
+.blur{
+    filter: blur(5px); 
+}
 
 h1, h2, h3, p {
     margin: 0;
@@ -785,6 +782,7 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            filter:none;
 
             .close {
                 position: relative;
