@@ -586,10 +586,12 @@ header {
       .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__title {
         color: #987A6E;
         font-family: "Montserrat", sans-serif;
-        margin-bottom: 40px; }
+        margin-bottom: 25px;
+        margin-top: 10px; }
         .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__title h2 {
           font-size: 1.11em;
-          line-height: 24px; }
+          line-height: 24px;
+          padding-bottom: 5px; }
         .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__title p {
           font-size: .77em; }
       .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems {
@@ -601,14 +603,19 @@ header {
             padding: 0;
             width: 277px;
             margin-right: auto;
-            max-height: 404px; }
+            max-height: 404px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; }
             .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_pic {
               width: 277px;
               height: 277px; }
               .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_pic img {
                 width: 99%; }
             .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc {
-              width: 100%; }
+              width: 100%;
+              color: #987A6E; }
               .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalog__card_item .catalog__card_desc h3 {
                 font-weight: 600;
                 font-size: .88em;
@@ -635,7 +642,7 @@ header {
               font-size: .88em;
               border: none;
               border-bottom: 1px solid #987A6E;
-              padding: 12px 14px;
+              padding: 10px 14px;
               box-sizing: border-box;
               margin-bottom: 12px;
               color: #403637;
