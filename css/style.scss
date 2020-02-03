@@ -701,6 +701,7 @@ header {
             @extend .descriptions;
             margin-bottom: 0;
             display: flex;
+            align-items: stretch;
             width: 100%;
             height: 100%;
 
@@ -713,7 +714,10 @@ header {
                 .contacts__desc_wrap{
                     max-width: 915px;
                     width: 90%;
-                    margin-left: auto; 
+                    margin-left: auto;
+                    position: relative; 
+                    height: 560px;
+
                     
                     .contacts__desc_bg {
                         @extend .constLeft;
@@ -736,9 +740,6 @@ header {
                             max-width: 615px;
                             width: 34em;
                             width: 80%;
-                            // position: absolute;
-                            // top: 22%;
-                            // left: 6.66em;
                             position: relative;
                             z-index: 3;
                             padding-top: 4.27em;
@@ -776,6 +777,10 @@ header {
                     .contacts__desc_map {
                         width: 100%;
                         height: 200px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        
                     }
                 }               
             }
