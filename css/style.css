@@ -506,10 +506,11 @@ header {
             #contacts .contacts .cont .contacts__desc .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text {
               max-width: 615px;
               width: 34em;
-              position: absolute;
-              top: 22%;
-              left: 6.66em;
-              z-index: 3; }
+              width: 80%;
+              position: relative;
+              z-index: 3;
+              padding-top: 4.27em;
+              margin: 0 auto; }
               #contacts .contacts .cont .contacts__desc .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p {
                 display: flex;
                 justify-content: space-between; }
