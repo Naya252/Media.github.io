@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400&display=swap|Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,600&display=swap|Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <!-- map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -107,62 +107,64 @@
                                     <div class="close">
                                         <a id="close" href="#">&#xD7</i></a>                                       
                                     </div>
-                                    <div class="descriptions" style="margin-bottom: 0; margin-left: 2em;">
-                                        <h2 style="font-size: 20px; line-height: 24px;">Оформление примерки</h2>
-                                        <p style="font-size: 14px;">Заполните форму и мы свяжемся с вами для подтвержания примерки и уточнения деталей.</p>
-                                    </div>
-                                    <div class="catalogMod__container_elems">                                        
-                                        <div class="catalogMod__container_elem">
-                                            <div id="catalogClass" class="catalog__card_item" style="padding: 0; width: 277px; margin: 0 auto; justify-content: flex-start; height: 95%;">
-                                                <div class="catalog__card_pic" style="width: 277px; height: 277px;">
-                                                    <img src="img/image88.jpg" style="width: 98%;" alt="2778-10 Пусеты">
+                                    <div class="catalogMod__content">
+                                        <div class="catalogMod__title">
+                                            <h2>Оформление примерки</h2>
+                                            <p>Заполните форму и мы свяжемся с вами для подтвержания примерки и уточнения деталей.</p>
+                                        </div>
+                                        <div class="catalogMod__container_elems">                                        
+                                            <div class="catalogMod__container_elem">
+                                                <div id="catalogClass" class="catalog__card_item">
+                                                    <div class="catalog__card_pic">
+                                                        <img src="img/image88.jpg" alt="2778-10 Пусеты">
+                                                    </div>
+                                                    <div class="catalog__card_desc">
+                                                        <h3>2778-10 Пусеты</h3>
+                                                        <p>Золото, бриллианты 66 шт. 0,368ct, сапфир 8 шт., турмалин 2 шт.</p>
+                                                    </div>                        
                                                 </div>
-                                                <div class="catalog__card_desc">
-                                                    <h3>2778-10 Пусеты</h3>
-                                                    <p>Золото, бриллианты 66 шт. 0,368ct, </p>
-                                                    <p>сапфир 8 шт., турмалин 2 шт.</p>
-                                                </div>                        
+    
                                             </div>
-
-                                        </div>
-                                        <div class="catalogMod__container_elem">
-                                            <div class="catalogMod__form">
-                                                <form id="catalog__form" class="catalog__form" method="post">
-                                                    <div class="box-input">
-                                                        <input class="inputMod" type="text" id="nameMod" name="name" placeholder=" " required>
-                                                        <label for="name">Имя</label>
-                                                    </div>
-                                                    <div class="box-input">
-                                                        <input class="inputMod" type="tel" id="telMod" name="tel" placeholder=" " required pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
-                                                        <label for="tel">Телефон</label>
-                                                    </div>
-                                                    <div class="box-input">
-                                                        <input class="inputMod" type="email" id="emailMod" name="email" placeholder=" "
+                                            <div class="catalogMod__container_elem">
+                                                <div class="catalogMod__form">
+                                                    <form id="catalog__form" class="catalog__form" method="post">
+                                                        <div class="box-input">
+                                                            <input class="inputMod" type="text" id="nameMod" name="name" placeholder=" " required>
+                                                            <label for="name">Имя</label>
+                                                        </div>
+                                                        <div class="box-input">
+                                                            <input class="inputMod" type="tel" id="telMod" name="tel" placeholder=" " required pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
+                                                            <label for="tel">Телефон</label>
+                                                        </div>
+                                                        <div class="box-input">
+                                                            <input class="inputMod" type="email" id="emailMod" name="email" placeholder=" "
+                                                                required>
+                                                            <label for="email">Email</label>
+                                                        </div>
+                                                        <div class="box-input">
+                                                            <input class="inputMod" name="text" id="textMod" cols="30" rows="1" placeholder=" "
                                                             required>
-                                                        <label for="email">Email</label>
-                                                    </div>
-                                                    <div class="box-input">
-                                                        <input class="inputMod" name="text" id="textMod" cols="30" rows="1" placeholder=" "
-                                                        required>
-                                                        <label for="text">Город</label>
-                                                    </div>
-                
-                                                    <div class="recover">
-                                                        <input type="checkbox" id="ckboxMod" name="ckboxMod" required>
-                                                        <label for="ckboxMod">Принимаю соглашение об обработке персональных данных</a></label>
-                                                    </div>
-                                                    <div class="recover">
-                                                        <input type="checkbox" id="ckbox2Mod" name="ckbox2Mod">
-                                                        <label for="ckbox2Mod">Хочу получать рекламную рассылку “Бриллианты Костромы”</a></label>
-                                                    </div>
-                                                    
-                                                    <input id="btnForm" type="submit" value="Заказать" class="button">   
-                                                </form>
+                                                            <label for="text">Город</label>
+                                                        </div>
+                    
+                                                        <div class="recover">
+                                                            <input type="checkbox" id="ckboxMod" name="ckboxMod" required>
+                                                            <label for="ckboxMod">Принимаю соглашение об обработке персональных данных</a></label>
+                                                        </div>
+                                                        <div class="recover">
+                                                            <input type="checkbox" id="ckbox2Mod" name="ckbox2Mod">
+                                                            <label for="ckbox2Mod">Хочу получать рекламную рассылку “Бриллианты Костромы”</a></label>
+                                                        </div>
+                                                        
+                                                        <input id="btnForm" type="submit" value="Заказать" class="button">   
+                                                    </form>
+                                                </div>
                                             </div>
+    
+    
                                         </div>
-
-
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
