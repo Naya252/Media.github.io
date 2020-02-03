@@ -42,6 +42,14 @@ body {
     font-size: $fs1920;
 }
 
+// .blur{
+//     -ms-filter: blur(5px);
+//     -webkit-filter: blur(5px);
+//     -moz-filter: blur(5px);
+//     -o-filter: blur(5px);
+//     filter: blur(5px); 
+// }
+
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -370,6 +378,209 @@ header {
             }
         }
     }
+
+
+    /* modal */
+    /* свойства модального окна по умолчанию */
+    .catalogMod {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(64, 54, 55, 0.6);
+        opacity: 0;
+
+        /* элемент невидим для событий мыши */
+        pointer-events: none;
+        margin: 0;
+        padding: 0;
+        z-index: 9999999;
+
+        &:target {
+            opacity: 1;
+            /* возвращаем элементу событийность мыши */
+            pointer-events: auto;
+
+        }
+    }
+
+
+    /* -----  Выравнивание по середине  -----*/
+    .catalogMod__wrap {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 9999999999;
+
+        .catalogMod__container {
+            max-width: 817px;
+            width: 100%;
+            max-height: 544px;
+            width: 45.38em;
+    
+            background-color: #FFFFFF;
+            padding: .5em;
+            margin: auto;
+
+            .catalogMod__container_elems{
+                display: flex;
+                margin-bottom: 2em;
+
+                .catalogMod__container_elem{
+                    padding: .5em;
+                    width: 50%;
+                    max-height: 544px;
+
+                    .catalogMod__form{
+                        @extend .contacts__question_form;
+                        max-width: 255px;
+                        margin: auto;
+
+                        .catalog__form{
+                            @extend .contacts__form;
+                        }
+
+                        .inputMod {
+                            display: block;
+                            width: 100%;
+                            font-size: 16px;
+                            border: none;
+                            border-bottom: $borderBottom;
+                            padding: 12px 14px;
+                            box-sizing: border-box;
+                            margin-bottom: 22px;
+                            color: $mainTextColor;
+                            outline: none;
+                        }
+
+                        /* Плавающий текст */
+                        .box-input {
+                            position: relative;
+                        }
+
+                        .box-input input {
+                            border: none;
+                            border-bottom: $borderBottom;
+                            padding: 10px 0;
+                            background: inherit;
+                            max-width: 386px;
+
+                            &:focus{
+                                border-bottom-color: $mainTextColor;
+                            }
+                        }
+
+                        .box-input label {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            padding-top: 10px;
+                            color:$catalogTextColor;
+                            transition: .5s;
+                            pointer-events: none;
+                        }
+
+                        .box-input input:focus~label,
+                        .box-input textarea:focus~label,
+                        .box-input input:valid~label,
+                        .box-input textarea:valid~label{
+                            top: -20px;
+                            font-size: 12px;
+                            color: $infoColor;                           
+                        }
+
+                        /* Анимированный чекбокс */
+                        .recover {
+                            padding-left: .6em;;
+                            margin-top: 15px;
+                            font-size: 10px; 
+                            
+                            label[for='ckboxMod'],
+                            label[for='ckbox2Mod'] {
+                                cursor: pointer;
+                                padding-left: 1.75em;
+                                width: 100%;
+                                display: block;
+                                position: relative;
+                            }
+
+                            label[for='ckboxMod']::before,
+                            label[for='ckbox2Mod']::before {
+                                content: '';
+                                position: absolute;
+                                border: $catlogBorder;
+                                width: 10px;
+                                height: 10px;
+                                top: -2px;
+                                left: 0;
+                                transition: .2s;
+                            }
+
+                            #ckboxMod:checked+label::before,
+                            #ckbox2Mod:checked+label::before {
+                                border-top: 2px solid transparent;
+                                border-left: 2px solid transparent;
+                                border-right: 2px solid $catalogTextColor;
+                                border-bottom: 2px solid $catalogTextColor;
+                                transform: rotate(40deg);
+                                width: 6px;
+                                height: 11px;
+                                transform-origin: 100% 100%;
+                                top: -4px;
+                                left: -5px;
+                            }
+
+                            #ckboxMod:not(:checked),
+                            #ckbox2Mod:not(:checked),
+                            #ckboxMod:checked,
+                            #ckbox2Mod:checked {
+                                display: none;
+                            }
+                        }
+
+                        #btnForm {
+                            @extend .btn;
+                            margin-top: 2em;
+                            outline: none;
+                        }
+
+
+                    }
+                } 
+
+            }
+    
+               
+        }
+    }
+
+
+    .close {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: .5em;
+    }
+
+    #close {
+        color: #491616;
+        font-size: 24px;
+    }
+
+    #close:hover {
+        color: #fc0000;
+    }
+
+
+    
 }
     
 .catalog__vector {
@@ -707,10 +918,7 @@ header {
                         }
 
                     }
-                    
-
-                    
-                    
+  
                 }
             }
         }
@@ -748,6 +956,18 @@ footer{
         }
 
         
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    body{
+        font-size: 16px;
+
+        .catalog__card {
+            width: 200px;
+            height: 380px;
+        }
     }
 }
 

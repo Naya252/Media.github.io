@@ -164,7 +164,7 @@ header {
     .pic .pic__img .pic__img_pict {
       width: 100%; }
 
-.btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm {
+.btn, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form #btnForm, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form #btnForm, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form #btnForm, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form #btnForm, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form #btnForm {
   font-family: "Playfair Display", serif;
   border: 1px solid #DD7D5C;
   background: #DD7D5C;
@@ -174,16 +174,19 @@ header {
   margin-left: 5px;
   box-shadow: 5px 5px 0 1px white, 5px 5px 0 2px #DD7D5C, -5px -5px 0 1px white, -5px -5px 0 2px #DD7D5C;
   transition: box-shadow .5s ease, filter .5s ease; }
-  .btn:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover {
+  .btn:hover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form #btnForm:hover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form #btnForm:hover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form #btnForm:hover, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form #btnForm:hover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form #btnForm:hover {
     filter: contrast(150%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C; }
-  .btn:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active {
+  .btn:active, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form #btnForm:active, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form #btnForm:active, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form #btnForm:active, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form #btnForm:active, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form #btnForm:active {
     filter: contrast(300%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C, 0 0 0 2px #DD7D5C inset, 0 0 0 4px white inset; }
 
 .catalog__cards {
   flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  /* modal */
+  /* ╤Б╨▓╨╛╨╣╤Б╤В╨▓╨░ ╨╝╨╛╨┤╨░╨╗╤М╨╜╨╛╨│╨╛ ╨╛╨║╨╜╨░ ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О */
+  /* -----  ╨Т╤Л╤А╨░╨▓╨╜╨╕╨▓╨░╨╜╨╕╨╡ ╨┐╨╛ ╤Б╨╡╤А╨╡╨┤╨╕╨╜╨╡  -----*/ }
   .catalog__cards .catalog__card {
     display: flex;
     justify-content: space-between;
@@ -251,6 +254,142 @@ header {
         .catalog__cards .catalog__card .catalog__card_order .catalog__card_btn:hover {
           background-color: #DD7D5C;
           color: #FDFBFA; }
+  .catalog__cards .catalogMod {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(64, 54, 55, 0.6);
+    opacity: 0;
+    /* ╤Н╨╗╨╡╨╝╨╡╨╜╤В ╨╜╨╡╨▓╨╕╨┤╨╕╨╝ ╨┤╨╗╤П ╤Б╨╛╨▒╤Л╤В╨╕╨╣ ╨╝╤Л╤И╨╕ */
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    z-index: 9999999; }
+    .catalog__cards .catalogMod:target {
+      opacity: 1;
+      /* ╨▓╨╛╨╖╨▓╤А╨░╤Й╨░╨╡╨╝ ╤Н╨╗╨╡╨╝╨╡╨╜╤В╤Г ╤Б╨╛╨▒╤Л╤В╨╕╨╣╨╜╨╛╤Б╤В╤М ╨╝╤Л╤И╨╕ */
+      pointer-events: auto; }
+  .catalog__cards .catalogMod__wrap {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9999999999; }
+    .catalog__cards .catalogMod__wrap .catalogMod__container {
+      max-width: 817px;
+      width: 100%;
+      max-height: 544px;
+      width: 45.38em;
+      background-color: #FFFFFF;
+      padding: .5em;
+      margin: auto; }
+      .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems {
+        display: flex;
+        margin-bottom: 2em; }
+        .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem {
+          padding: .5em;
+          width: 50%;
+          max-height: 544px; }
+          .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form {
+            max-width: 255px;
+            margin: auto;
+            /* ╨Я╨╗╨░╨▓╨░╤О╤Й╨╕╨╣ ╤В╨╡╨║╤Б╤В */
+            /* ╨Р╨╜╨╕╨╝╨╕╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╤З╨╡╨║╨▒╨╛╨║╤Б */ }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .inputMod {
+              display: block;
+              width: 100%;
+              font-size: 16px;
+              border: none;
+              border-bottom: 1px solid #987A6E;
+              padding: 12px 14px;
+              box-sizing: border-box;
+              margin-bottom: 22px;
+              color: #403637;
+              outline: none; }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input {
+              position: relative; }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input {
+              border: none;
+              border-bottom: 1px solid #987A6E;
+              padding: 10px 0;
+              background: inherit;
+              max-width: 386px; }
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus {
+                border-bottom-color: #403637; }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input label {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding-top: 10px;
+              color: #987A6E;
+              transition: .5s;
+              pointer-events: none; }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input textarea:focus ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input textarea:valid ~ label {
+              top: -20px;
+              font-size: 12px;
+              color: #CBA696; }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover {
+              padding-left: .6em;
+              margin-top: 15px;
+              font-size: 10px; }
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckboxMod'],
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckbox2Mod'] {
+                cursor: pointer;
+                padding-left: 1.75em;
+                width: 100%;
+                display: block;
+                position: relative; }
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckboxMod']::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover label[for='ckbox2Mod']::before {
+                content: '';
+                position: absolute;
+                border: 1px solid #CBA696;
+                width: 10px;
+                height: 10px;
+                top: -2px;
+                left: 0;
+                transition: .2s; }
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked + label::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked + label::before {
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-right: 2px solid #987A6E;
+                border-bottom: 2px solid #987A6E;
+                transform: rotate(40deg);
+                width: 6px;
+                height: 11px;
+                transform-origin: 100% 100%;
+                top: -4px;
+                left: -5px; }
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:not(:checked),
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:not(:checked),
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked {
+                display: none; }
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
+              margin-top: 2em;
+              outline: none; }
+  .catalog__cards .close {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: .5em; }
+  .catalog__cards #close {
+    color: #491616;
+    font-size: 24px; }
+  .catalog__cards #close:hover {
+    color: #fc0000; }
 
 .catalog__vector {
   width: 71px;
@@ -405,23 +544,23 @@ header {
           width: 90%;
           height: 560px;
           margin-right: auto; }
-        #contacts .contacts .cont .contacts__question .contacts__question_form {
+        #contacts .contacts .cont .contacts__question .contacts__question_form, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form {
           max-width: 460px;
           width: 34em;
           padding-top: 4.27em;
           margin: 0 auto; }
-          #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__question_mainLabel {
+          #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__question_mainLabel, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__question_mainLabel, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__question_mainLabel {
             font-size: 2em;
             font-family: "Playfair Display", serif;
             color: #403637;
             font-weight: bold;
             line-height: 50px; }
-          #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form {
+          #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form {
             padding-left: .6em;
             margin-top: 2em;
             /* ╨Я╨╗╨░╨▓╨░╤О╤Й╨╕╨╣ ╤В╨╡╨║╤Б╤В */
             /* ╨Р╨╜╨╕╨╝╨╕╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╤З╨╡╨║╨▒╨╛╨║╤Б */ }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .input {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .input, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .input, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .input {
               display: block;
               width: 100%;
               font-size: 16px;
@@ -432,19 +571,19 @@ header {
               margin-bottom: 22px;
               color: #403637;
               outline: none; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form textarea {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form textarea, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form textarea, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form textarea, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form textarea, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form textarea, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form textarea {
               overflow: auto; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input {
               position: relative; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input input, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input input, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input input, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input textarea, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input textarea, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input textarea, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input textarea, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input textarea {
               border: none;
               border-bottom: 1px solid #987A6E;
               padding: 10px 0;
               background: inherit;
               max-width: 386px; }
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus {
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input input:focus, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input input:focus, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input input:focus, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input input:focus, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input input:focus, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input textarea:focus, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input textarea:focus, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input textarea:focus, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input textarea:focus, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input textarea:focus {
                 border-bottom-color: #403637; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input label {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input label, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input label, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input label, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input label, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input label, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input label {
               position: absolute;
               top: 0;
               left: 0;
@@ -452,26 +591,51 @@ header {
               color: #987A6E;
               transition: .5s;
               pointer-events: none; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus ~ label,
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus ~ label, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input input:focus ~ label, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input input:focus ~ label, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input input:focus ~ label, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input input:focus ~ label, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input input:focus ~ label,
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus ~ label,
+            #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input textarea:focus ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input textarea:focus ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input textarea:focus ~ label,
+            #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input textarea:focus ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input textarea:focus ~ label,
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:valid ~ label,
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:valid ~ label {
+            #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input input:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input input:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input input:valid ~ label,
+            #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input input:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input input:valid ~ label,
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:valid ~ label,
+            #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .box-input textarea:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .box-input textarea:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .box-input textarea:valid ~ label,
+            #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .box-input textarea:valid ~ label,
+            .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .box-input textarea:valid ~ label {
               top: -20px;
               font-size: 12px;
               color: #CBA696; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover {
               padding-left: .6em;
               margin-top: 15px;
               font-size: 10px; }
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox'],
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2'] {
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox'], #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover label[for='ckbox'], .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover label[for='ckbox'], .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover label[for='ckbox'], #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover label[for='ckbox'], .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover label[for='ckbox'],
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2'],
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover label[for='ckbox2'],
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover label[for='ckbox2'],
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover label[for='ckbox2'],
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover label[for='ckbox2'],
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover label[for='ckbox2'] {
                 cursor: pointer;
                 padding-left: 1.75em;
                 width: 100%;
                 display: block;
                 position: relative; }
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox']::before,
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2']::before {
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox']::before, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover label[for='ckbox']::before, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover label[for='ckbox']::before, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover label[for='ckbox']::before, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover label[for='ckbox']::before, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover label[for='ckbox']::before,
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2']::before,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover label[for='ckbox2']::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover label[for='ckbox2']::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover label[for='ckbox2']::before,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover label[for='ckbox2']::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover label[for='ckbox2']::before {
                 content: '';
                 position: absolute;
                 border: 1px solid #CBA696;
@@ -480,8 +644,13 @@ header {
                 top: -2px;
                 left: 0;
                 transition: .2s; }
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:checked + label::before,
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked + label::before {
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:checked + label::before, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover #ckbox:checked + label::before, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover #ckbox:checked + label::before, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover #ckbox:checked + label::before, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover #ckbox:checked + label::before, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover #ckbox:checked + label::before,
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked + label::before,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover #ckbox2:checked + label::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover #ckbox2:checked + label::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover #ckbox2:checked + label::before,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover #ckbox2:checked + label::before,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover #ckbox2:checked + label::before {
                 border-top: 2px solid transparent;
                 border-left: 2px solid transparent;
                 border-right: 2px solid #987A6E;
@@ -492,12 +661,27 @@ header {
                 transform-origin: 100% 100%;
                 top: -4px;
                 left: -5px; }
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:not(:checked),
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:not(:checked), #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover #ckbox:not(:checked), .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover #ckbox:not(:checked), .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover #ckbox:not(:checked), #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover #ckbox:not(:checked), .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover #ckbox:not(:checked),
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:not(:checked),
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover #ckbox2:not(:checked),
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover #ckbox2:not(:checked),
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover #ckbox2:not(:checked),
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover #ckbox2:not(:checked),
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover #ckbox2:not(:checked),
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox:checked,
-              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked {
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover #ckbox:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover #ckbox:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover #ckbox:checked,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover #ckbox:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover #ckbox:checked,
+              #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form .recover #ckbox2:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form .recover #ckbox2:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form .recover #ckbox2:checked,
+              #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form .recover #ckbox2:checked,
+              .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form .recover #ckbox2:checked {
                 display: none; }
-            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm {
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .contacts__form #btnForm, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .contacts__form #btnForm, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #contacts .contacts .cont .contacts__question .contacts__question_form .catalog__form #btnForm, #contacts .contacts .cont .contacts__question .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .catalog__form #btnForm, .catalog__cards .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem #contacts .contacts .cont .contacts__question .catalogMod__form .catalog__form #btnForm {
               margin-top: 2em;
               outline: none; }
 
@@ -518,5 +702,12 @@ footer {
       font-size: 0.8em; }
     footer .foo .foo__text .a {
       border-bottom: 1px solid #CBA696; }
+
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 16px; }
+    body .catalog__card {
+      width: 200px;
+      height: 380px; } }
 
 /*# sourceMappingURL=style.css.map */
