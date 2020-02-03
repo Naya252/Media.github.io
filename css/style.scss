@@ -71,7 +71,7 @@ ul, li {
     width: 90%;
     height: 100%;
     max-width: 1680px;   
-    margin: auto;  
+    margin: 0 auto;  
 }
 
 .pt {
@@ -963,11 +963,6 @@ footer{
 
     body{
         font-size: 16px;
-
-        .catalog__card {
-            width: 200px;
-            height: 380px;
-        }
     }
 }
 

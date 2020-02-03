@@ -39,7 +39,7 @@ ul, li {
   width: 90%;
   height: 100%;
   max-width: 1680px;
-  margin: auto; }
+  margin: 0 auto; }
 
 .pt {
   padding-top: 9.38em; }
@@ -705,9 +705,6 @@ footer {
 
 @media screen and (max-width: 1440px) {
   body {
-    font-size: 16px; }
-    body .catalog__card {
-      width: 200px;
-      height: 380px; } }
+    font-size: 16px; } }
 
 /*# sourceMappingURL=style.css.map */
