@@ -52,9 +52,12 @@ h1, h2, h3, p {
 }
 
 a {
-    text-decoration: none; 
+    text-decoration: none;     
+}
+
+*{
     outline: none; 
-    -webkit-tap-highlight-color: transparent;  
+    -webkit-tap-highlight-color: transparent; 
 }
 
 ul, li {
@@ -158,6 +161,10 @@ header {
         align-items: center;
         border-bottom: $borderBottom;
         width: 100%;
+
+        #nav__toggle {
+            display: none;
+          }
 
         .nav__list {
             @extend .const;
@@ -1073,12 +1080,111 @@ footer{
     }
 }
 
+
+
 @media screen and (max-width: 1440px) {
 
     body{
         font-size: 16px;
     }
 }
+
+
+
+
+//Бургер меню
+@media screen and (max-width: 768px){
+
+    .nav {
+        width: 50% !important;
+        justify-content: flex-end;
+    }
+    .nav__list{
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        padding: 2em !important;
+        flex-direction: column;
+        justify-content: flex-end !important;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+    }
+
+    .nav__item{
+        position: relative;
+        padding: .5em;        
+        width: 100%;       
+    }
+
+    .nav__link{
+        color: white !important;
+        margin-left: auto;
+        padding-right: 3em;
+
+        &::after{
+            border-bottom: 1px solid white !important; 
+        }
+    }
+
+    #nav__toggle:checked ~ .nav__btn > span {
+        transform: rotate(45deg);
+      }
+      #nav__toggle:checked ~ .nav__btn > span::before {
+        top: 0;
+      
+        transform: rotate(0);
+      }
+      #nav__toggle:checked ~ .nav__btn > span::after {
+        top: 0;
+      
+        transform: rotate(90deg);
+      }
+      #nav__toggle:checked ~ .nav__list{
+        visibility: visible;
+      }
+    
+    .nav__btn {
+        top: 5px;
+        left: 10px;
+        z-index: 10;     
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 25px;      
+        cursor: pointer;
+      }
+      
+      .nav__btn > span,
+      .nav__btn > span::before,
+      .nav__btn > span::after {
+        position: absolute;      
+        display: block;
+        width: 32px;
+        height: 2px;      
+        background-color: $catalogTextColor;     
+        transition-duration: 0.25s;
+      }
+
+      .nav__btn > span{
+        width: 24px;
+      }
+      
+      .nav__btn > span::before {
+        content: "";
+        top: -8px;
+        right: -3px;
+      }
+      
+      .nav__btn > span::after {
+        content: "";
+        top: 8px;
+        right: -3px;
+      }
+}
+
+
+
 
 
 
