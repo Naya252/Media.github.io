@@ -38,6 +38,28 @@ ul, li {
   display: flex;
   margin: 0; }
 
+@-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent; } }
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both; }
+
+input {
+  outline: none; }
+
+textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-padding-end: 0px;
+  -moz-padding-start: 0px;
+  height: 2.5em; }
+
+::-moz-focus-outer, ::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
 .wrapper {
   width: 90%;
   height: 100%;
@@ -171,7 +193,7 @@ header {
     .pic .pic__img .pic__img_pict {
       width: 100%; }
 
-.btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
+.btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnMod {
   font-family: "Playfair Display", serif;
   border: 1px solid #DD7D5C;
   background: #DD7D5C;
@@ -181,10 +203,10 @@ header {
   margin-left: 5px;
   box-shadow: 5px 5px 0 1px white, 5px 5px 0 2px #DD7D5C, -5px -5px 0 1px white, -5px -5px 0 2px #DD7D5C;
   transition: box-shadow .5s ease, filter .5s ease; }
-  .btn:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:hover {
+  .btn:hover, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:hover, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnMod:hover {
     filter: contrast(150%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C; }
-  .btn:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm:active {
+  .btn:active, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm:active, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnMod:active {
     filter: contrast(300%);
     box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px #DD7D5C, -1px -1px 0 1px white, -1px -1px 0 2px #DD7D5C, 0 0 0 2px #DD7D5C inset, 0 0 0 4px white inset; }
 
@@ -444,7 +466,6 @@ header {
               padding: 12px 14px;
               box-sizing: border-box;
               margin-bottom: 22px;
-              color: #403637;
               outline: none; }
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form textarea {
               overflow: auto; }
@@ -456,7 +477,8 @@ header {
               padding: 10px 0;
               background: inherit;
               background: #FCF9F7;
-              max-width: 386px; }
+              max-width: 386px;
+              color: #403637; }
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:focus, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus {
                 border-bottom-color: #403637; }
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input label {
@@ -471,13 +493,16 @@ header {
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:focus ~ label,
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input input:valid ~ label,
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .box-input textarea:valid ~ label {
-              top: -20px;
+              top: -25px;
               font-size: 12px;
               color: #CBA696; }
+            #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .chboxs {
+              margin: 1.8em 0 2.7em .5em; }
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover {
               padding-left: .6em;
               margin-top: 15px;
-              font-size: 10px; }
+              font-size: 10px;
+              color: #403637; }
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox'],
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover label[for='ckbox2'] {
                 cursor: pointer;
@@ -513,7 +538,6 @@ header {
               #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .recover #ckbox2:checked {
                 display: none; }
             #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm {
-              margin-top: 2em;
               outline: none; }
 
 /* modal */
@@ -645,7 +669,6 @@ header {
               padding: 10px 14px;
               box-sizing: border-box;
               margin-bottom: 12px;
-              color: #403637;
               outline: none; }
             .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input {
               position: relative; }
@@ -654,9 +677,8 @@ header {
               border-bottom: 1px solid #987A6E;
               padding: 25px 0 8px;
               background: inherit;
-              max-width: 386px; }
-              .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input input:focus {
-                border-bottom-color: #403637; }
+              max-width: 386px;
+              color: #403637; }
             .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .box-input label {
               position: absolute;
               top: 0;
@@ -705,7 +727,7 @@ header {
               .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckboxMod:checked,
               .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .recover #ckbox2Mod:checked {
                 display: none; }
-            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnForm {
+            .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnMod {
               margin-top: 2em;
               outline: none;
               align-self: flex-end; }
