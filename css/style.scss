@@ -57,7 +57,7 @@ a {
 
 *{
     outline: none; 
-    -webkit-tap-highlight-color: transparent; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 ul, li {
@@ -151,7 +151,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 
     .nav{
         max-width: 1083px;
@@ -232,7 +232,10 @@ header {
 
         p {
             @extend .constP;
-            bottom: -25%;
+            bottom: -30%;
+            letter-spacing: 0.02em;
+            font-size: 320px;
+            left: -2%;
         }
     }
 
@@ -265,7 +268,7 @@ header {
                 p{
                     font-size: 1.66em; 
                     color: $mainTextColor;
-                    line-height: 2.33em;
+                    line-height: 1.33em;
                 } 
             }                      
         }
@@ -309,14 +312,14 @@ header {
     letter-spacing: 0.02em;
     padding: .94em 2.77em;
     margin-left: 5px;
-    box-shadow: 5px 5px 0 1px white, 5px 5px 0 2px $btnColor, 
-                -5px -5px 0 1px white, -5px -5px 0 2px $btnColor;
+    box-shadow: 5px 5px 0 1px #FCF9F7, 5px 5px 0 2px $btnColor, 
+                -5px -5px 0 1px #FCF9F7, -5px -5px 0 2px $btnColor;
     transition: box-shadow .5s ease, filter .5s ease;
 
     &:hover{
         filter: contrast(150%);
-        box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px $btnColor, 
-                -1px -1px 0 1px white, -1px -1px 0 2px $btnColor;
+        box-shadow: 1px 1px 0 1px  #FCF9F7, 1px 1px 0 2px $btnColor, 
+                -1px -1px 0 1px #FCF9F7, -1px -1px 0 2px $btnColor;
     }
     
     &:active{
@@ -362,8 +365,8 @@ header {
 
                 img {
                     position: absolute;
-                    top: center;
-                    left: center;
+                    top: 0;
+                    left: 0;
                 }
             }
 
@@ -570,10 +573,10 @@ header {
             
                         p.bg {
                             @extend .constP;
-                            font-size: 18em;
+                            font-size: 20em;
                             position: absolute;
-                            top: 20%;
-                            // z-index: 2;
+                            top: 13%;
+                            left: -30px;
                             margin: 0;
                         }
             
@@ -1060,6 +1063,7 @@ footer{
         margin-left: 7em;
 
         .foo__text{
+            display: block;
             
             p{
                 margin-top: 6px;
@@ -1072,15 +1076,30 @@ footer{
 
             }
             .a{
-                border-bottom: $catlogBorder; 
+                border-bottom: $catlogBorder;
             }
+        }
+
+        .foo__left{
+            text-align: right;
         }
 
         
     }
 }
 
-
+@media screen and (min-width: 2000px) {
+    p.bg {
+        font-size: 18.8em !important;
+    }
+    .contacts__question, .contacts__desc {
+        width: 50% !important;
+        max-width: 5000px !important;
+    }
+    .contacts__question_wrap, .contacts__desc_wrap{
+        max-width: 840px !important;
+    }
+}
 
 @media screen and (max-width: 1440px) {
 
@@ -1088,9 +1107,6 @@ footer{
         font-size: 16px;
     }
 }
-
-
-
 
 //Бургер меню
 @media screen and (max-width: 768px){

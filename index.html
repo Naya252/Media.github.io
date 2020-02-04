@@ -15,6 +15,8 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
     <link rel="stylesheet" href="css/style.css">
     <title>Бриллианты Костромы</title>
 </head>
@@ -30,7 +32,9 @@
                             <label class="nav__btn" for="nav__toggle">
                             <span></span>
                             </label>
-                    <ul class="nav__list">
+
+
+                    <ul id="navList" class="nav__list">
                         <li class="nav__item">
                             <a href="#main" class="nav__link">Главная</a>
                         </li>
@@ -51,6 +55,22 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- <div  class="overlay nav">
+                    <nav class="overlayMenu nav">  
+                        <ul role="menu" id="navList" class="nav__list">
+                            <li class="nav__item"><a href="#main" role="menuitem" class="nav__link">Главная</a></li>
+                            <li class="nav__item"><a href="#catalog" role="menuitem" class="nav__link">Каталог</a></li>
+                            <li class="nav__item"><a href="#delivery" role="menuitem" class="nav__link">Примерка и доставка</a></li>
+                            <li class="nav__item"><a href="#about" role="menuitem" class="nav__link">О нас</a></li>
+                            <li class="nav__item"><a href="#production" role="menuitem" class="nav__link">Производство</a></li>
+                            <li class="nav__item"><a href="#contacts" role="menuitem" class="nav__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="navBurger" role="navigation" id="navToggle"></div>  -->
+
             </div>
         </header>
         <div id="main">
@@ -103,79 +123,7 @@
                             <div class="catalog__card_price">
                                 <p>203 720.-</p>
                             </div> 
-                            <a id="catalogBtn" href="#" class="catalog__card_btn">Примерить</a>
-                            
-                            
-                            <!-- <div id="catalogMod" class="catalogMod">
-                                <div class="catalogMod__wrap">
-                                    <div class="catalogMod__container">
-                                        <div class="close">
-                                            <a id="close" href="#">&#xD7</i></a>                                       
-                                        </div>
-                                        <div class="catalogMod__content">
-                                            <div class="catalogMod__title">
-                                                <h2>Оформление примерки</h2>
-                                                <p>Заполните форму и мы свяжемся с вами для подтвержания примерки и уточнения деталей.</p>
-                                            </div>
-                                            <div class="catalogMod__container_elems">                                        
-                                                <div class="catalogMod__container_elem">
-                                                    <div id="catalogClass" class="catalog__card_item">
-                                                        <div class="catalog__card_pic">
-                                                            <img src="img/image88.jpg" alt="2778-10 Пусеты">
-                                                        </div>
-                                                        <div class="catalog__card_desc">
-                                                            <h3>2778-10 Пусеты</h3>
-                                                            <p>Золото, бриллианты 66 шт. 0,368ct, сапфир 8 шт., турмалин 2 шт.</p>
-                                                        </div>                        
-                                                    </div>   
-                                                </div>
-                                                <div class="catalogMod__container_elem">
-                                                    <div class="catalogMod__form">
-                                                        <form id="catalog__form" class="catalog__form" method="post">
-                                                            <div class="inputs">
-                                                                <div class="box-input">
-                                                                    <input class="inputMod" type="text" id="nameMod" name="name" placeholder=" " required>
-                                                                    <label for="name">Имя</label>
-                                                                </div>
-                                                                <div class="box-input">
-                                                                    <input class="inputMod" type="tel" id="telMod" name="tel" placeholder=" " required pattern="[7-8]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
-                                                                    <label for="tel">Телефон</label>
-                                                                </div>
-                                                                <div class="box-input">
-                                                                    <input class="inputMod" type="email" id="emailMod" name="email" placeholder=" "
-                                                                        required>
-                                                                    <label for="email">Email</label>
-                                                                </div>
-                                                                <div class="box-input">
-                                                                    <input class="inputMod" name="text" id="textMod" cols="30" rows="1" placeholder=" "
-                                                                    required>
-                                                                    <label for="text">Город</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="checkboxs">
-                                                                <div class="recover">
-                                                                    <input type="checkbox" id="ckboxMod" name="ckboxMod" required>
-                                                                    <label for="ckboxMod">Принимаю соглашение об обработке персональных данных</a></label>
-                                                                </div>
-                                                                <div class="recover">
-                                                                    <input type="checkbox" id="ckbox2Mod" name="ckbox2Mod">
-                                                                    <label for="ckbox2Mod">Хочу получать рекламную рассылку “Бриллианты Костромы”</a></label>
-                                                                </div>
-                                                            </div>
-    
-                                                            <input id="btnForm" type="submit" value="Заказать" class="button">   
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div> -->
-    
-    
-    
+                            <a id="catalogBtn" href="#" class="catalog__card_btn">Примерить</a>    
                         </div> 
                     </div>
                     <div class="catalog__card">
@@ -481,7 +429,7 @@
                         <a href="#">Политика конфеденциальности</a>
                         <p>© 2014–2019 «Бриллианты Костромы»</p>
                     </div>
-                    <div class="foo__text">
+                    <div class="foo__text foo__left">
                         <a class="a" href="#">Основной сайт</a>
                         <p>Разработка - media bay</p>
                         
@@ -557,8 +505,11 @@
             </div>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script> -->
+    
     <script src="js/script.js"></script>  
 </body>
 </html>
