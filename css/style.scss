@@ -229,7 +229,7 @@ header {
 
         p {
             @extend .constP;
-            bottom: -30%;
+            bottom: -40%;
             letter-spacing: 0.02em;
             font-size: 320px;
             left: -2%;
@@ -1168,6 +1168,21 @@ footer{
             font-size: 16px !important;
         }
     }
+
+    .pic__wrap{
+        width: 100% !important;
+        margin: 0 !important;
+        max-width: 883px !important;
+        
+        .pic__img{
+            width: 50vw !important;
+            height: 70vh !important;
+            max-width: 865px;
+            max-height: 775px;
+            padding-right: 80px;
+            margin: 0;   
+        }
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -1398,11 +1413,13 @@ footer{
         .nav__list{
             position: absolute;
             top: 100%;
-            right: 0%;
+            right: 0;
             padding: 2em !important;
+            margin: 0 !important;
             flex-direction: column;
             justify-content: flex-end !important;
-            width: 100%;
+            width: 100vw !important;
+            max-width: 2000px !important;
             background-color: rgba(0, 0, 0, 0.5);
             visibility: hidden;
         }
@@ -1410,12 +1427,12 @@ footer{
         .nav__item{
             position: relative;
             padding: .5em;        
-            width: 100%;       
+            width: 100%;     
         }
     
         .nav__link{
             color: white !important;
-            margin-left: auto;
+            margin: 0 20em 0 auto;
             padding-right: 3em;
     
             &::after{
