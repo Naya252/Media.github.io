@@ -131,50 +131,9 @@ for (let anchor of anchors) {
   // });
 }
 
-// отображение кнопки меню на планшетах
-// let overlay = document.getElementById("overlay");
-
-// if (matchMedia) {
-//   const mq2 = window.matchMedia("(min-width: 769px)");
-//   mq2.addListener(WidthChange);
-//   WidthChange(mq2);
-// }
-
-// function WidthChange(mq2) {
-//   if (mq2.matches) {
-//     overlay.classList.add("nav");
-//   } else {
-//     overlay.classList.remove("nav");
-//   }	
-// }
 
 
 
-//убираем  отступы у обертки хедера при ширине 1440
-// let wrapperHeader = document.getElementById("wrapperHeader");
-
-// // media query event handler
-// if (matchMedia) {
-//     const mq = window.matchMedia("(max-width: 1440px)");
-//     mq.addListener(WidthChange);
-//     WidthChange(mq);
-// }
-	
-// // media query change
-// function WidthChange(mq) {
-// 	if (mq.matches) {
-//       wrapperHeader.style.width = "100%";
-// 	} else {
-//         contacts__question.style.width = "46%";
-//         contacts__question.style.maxWidth = "1500px";
-//         contacts__desc.style.width = "54%";
-//         contacts__desc.style.maxWidth = "1500px";
-
-//         contacts__question_wrap.style.maxWidth = "765px";
-//         contacts__desc_wrap.style.maxWidth = "915px";
-
-// 	}	
-// }
 
 
 
