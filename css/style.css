@@ -937,83 +937,174 @@ footer {
     max-width: 1130px !important; } }
 @media screen and (max-width: 1300px) {
   .wrapper {
-    max-width: 1040px !important; } }
+    max-width: 1040px !important; }
+
+  .delivery__text {
+    padding-left: 1em !important; } }
 @media screen and (max-width: 1250px) {
   .wrapper {
-    max-width: 960px !important; } }
+    max-width: 960px !important; }
+
+  .contacts__desc_p {
+    max-width: 420px !important; } }
 @media screen and (max-width: 1199px) {
   .nav {
     width: 50% !important;
     justify-content: flex-end; }
+    .nav .nav__list {
+      position: absolute;
+      top: 100%;
+      right: 0%;
+      padding: 2em !important;
+      flex-direction: column;
+      justify-content: flex-end !important;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      visibility: hidden; }
+    .nav .nav__item {
+      position: relative;
+      padding: .5em;
+      width: 100%; }
+    .nav .nav__link {
+      color: white !important;
+      margin-left: auto;
+      padding-right: 3em; }
+      .nav .nav__link::after {
+        border-bottom: 1px solid white !important; }
+    .nav #nav__toggle:checked ~ .nav__btn > span {
+      transform: rotate(45deg); }
+    .nav #nav__toggle:checked ~ .nav__btn > span::before {
+      top: 0;
+      transform: rotate(0); }
+    .nav #nav__toggle:checked ~ .nav__btn > span::after {
+      top: 0;
+      transform: rotate(90deg); }
+    .nav #nav__toggle:checked ~ .nav__list {
+      visibility: visible; }
+    .nav .nav__btn {
+      top: 5px;
+      left: 10px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      width: 30px;
+      height: 25px;
+      cursor: pointer; }
+    .nav .nav__btn > span,
+    .nav .nav__btn > span::before,
+    .nav .nav__btn > span::after {
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 2px;
+      background-color: #987A6E;
+      transition-duration: 0.25s; }
+    .nav .nav__btn > span {
+      width: 24px; }
+    .nav .nav__btn > span::before {
+      content: "";
+      top: -8px;
+      right: -3px; }
+    .nav .nav__btn > span::after {
+      content: "";
+      top: 8px;
+      right: -3px; }
 
-  .nav__list {
-    position: absolute;
-    top: 100%;
-    right: 0%;
-    padding: 2em !important;
+  .wrapper {
+    max-width: 685px !important; }
+
+  header .wrapper, footer .wrapper {
+    max-width: 685px !important; }
+
+  footer .wrapper {
+    margin: 0 auto !important; }
+
+  .header__logo {
+    margin: 0 !important; }
+
+  #main .desc {
+    width: 767px !important;
+    overflow: hidden; }
+  #main .pic {
+    width: 1px !important; }
+    #main .pic .pic__img {
+      width: 519px !important;
+      height: 465px !important;
+      padding-right: 0 !important;
+      top: 80px !important; }
+  #main .desc__description {
+    height: 58vh !important; }
+  #main .desc__name {
+    margin: 0 !important;
+    height: 42vh !important;
+    width: 685px !important;
+    overflow: hidden; }
+    #main .desc__name p {
+      bottom: -15% !important;
+      left: -25px !important; }
+
+  .desc__wrap {
+    max-width: 650px !important;
+    height: 100%;
+    margin: 0 auto !important;
+    padding-top: 0 !important; }
+
+  #delivery .delivery__cards {
+    flex-wrap: wrap; }
+  #delivery .delivery__card {
+    min-width: 284px !important;
+    margin-bottom: 40px !important; }
+    #delivery .delivery__card .delivery__text {
+      padding: 0 !important; }
+      #delivery .delivery__card .delivery__text h3 {
+        margin-top: 30px !important; }
+
+  #contacts .pt2 {
+    padding-top: 22px !important; }
+  #contacts .cont {
     flex-direction: column;
-    justify-content: flex-end !important;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden; }
-
-  .nav__item {
-    position: relative;
-    padding: .5em;
-    width: 100%; }
-
-  .nav__link {
-    color: white !important;
-    margin-left: auto;
-    padding-right: 3em; }
-    .nav__link::after {
-      border-bottom: 1px solid white !important; }
-
-  #nav__toggle:checked ~ .nav__btn > span {
-    transform: rotate(45deg); }
-
-  #nav__toggle:checked ~ .nav__btn > span::before {
-    top: 0;
-    transform: rotate(0); }
-
-  #nav__toggle:checked ~ .nav__btn > span::after {
-    top: 0;
-    transform: rotate(90deg); }
-
-  #nav__toggle:checked ~ .nav__list {
-    visibility: visible; }
-
-  .nav__btn {
-    top: 5px;
-    left: 10px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    width: 30px;
-    height: 25px;
-    cursor: pointer; }
-
-  .nav__btn > span,
-  .nav__btn > span::before,
-  .nav__btn > span::after {
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 2px;
-    background-color: #987A6E;
-    transition-duration: 0.25s; }
-
-  .nav__btn > span {
-    width: 24px; }
-
-  .nav__btn > span::before {
-    content: "";
-    top: -8px;
-    right: -3px; }
-
-  .nav__btn > span::after {
-    content: "";
-    top: 8px;
-    right: -3px; } }
+    position: relative; }
+  #contacts .contacts__question, #contacts .contacts__desc {
+    width: 100% !important; }
+  #contacts .contacts__desc {
+    height: 200px !important; }
+  #contacts .contacts__question {
+    height: 500px !important;
+    margin-bottom: 200px; }
+  #contacts .contacts__desc_wrap {
+    width: 100% !important;
+    height: 200px !important;
+    max-width: 1200px !important;
+    position: static !important; }
+    #contacts .contacts__desc_wrap .contacts__desc_bg {
+      margin: 0 auto !important;
+      width: 685px !important;
+      height: 200px !important; }
+      #contacts .contacts__desc_wrap .contacts__desc_bg p {
+        top: 0 !important;
+        left: -70px !important; }
+      #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 685px !important;
+        max-width: 685px !important;
+        height: 230px !important; }
+        #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text h2 {
+          padding: 30px 0 !important; }
+        #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p {
+          max-width: 500px !important; }
+          #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p p {
+            padding-top: 0 !important;
+            padding-bottom: 8px !important; }
+  #contacts .contacts__question_wrap {
+    width: 100% !important;
+    height: 500px !important;
+    max-width: 1200px !important; } }
+@media screen and (max-width: 1023px) {
+  .desc__wrap {
+    padding-top: 10em !important; } }
+@media screen and (max-width: 580px) {
+  .wrapper {
+    max-width: 280px !important; } }
 
 /*# sourceMappingURL=style.css.map */
