@@ -166,7 +166,7 @@ header {
     .desc .desc__description .desc__info {
       margin-left: auto; }
       .desc .desc__description .desc__info h1 {
-        font-size: 8.5em;
+        font-size: 8.88em;
         font-family: "Playfair Display", serif;
         font-weight: bold;
         color: #403637;
@@ -202,6 +202,7 @@ header {
 
 .btn, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form #btnForm, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form #btnMod {
   font-family: "Playfair Display", serif;
+  font-weight: bold;
   border: 1px solid #DD7D5C;
   background: #DD7D5C;
   color: #FDFBFA;
@@ -772,10 +773,148 @@ footer {
 
   .contacts__question_wrap, .contacts__desc_wrap {
     max-width: 840px !important; } }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1919px) {
   body {
-    font-size: 16px; } }
-@media screen and (max-width: 768px) {
+    font-size: 14px !important; }
+
+  .wrapper {
+    max-width: 1200px !important; }
+
+  header .wrapper, footer .wrapper {
+    max-width: 1919px !important; }
+
+  footer .wrapper {
+    margin: 0 120px !important; }
+
+  .pt {
+    padding-top: 119px !important; }
+
+  .nav__list {
+    width: 800px !important;
+    margin-right: 120px; }
+
+  #wrapperHeader {
+    width: 100%;
+    max-width: 1920px; }
+
+  .header__logo {
+    margin-left: 120px;
+    width: 134px !important; }
+
+  .logo img {
+    width: 134px !important; }
+
+  .main {
+    overflow: hidden; }
+
+  .desc {
+    width: 72% !important; }
+
+  .pic {
+    width: 28% !important; }
+
+  .pic__wrap {
+    width: 100% !important;
+    margin: 0 !important;
+    max-width: 883px !important; }
+    .pic__wrap .pic__img {
+      width: 50vw !important;
+      height: 80vh !important;
+      max-width: 865px;
+      max-height: 775px;
+      padding-right: 120px;
+      margin: 0; }
+
+  .desc__description {
+    height: 56vh !important; }
+
+  .desc__name {
+    margin: 0 !important;
+    height: 44vh !important; }
+    .desc__name p {
+      bottom: -15% !important;
+      left: 1% !important;
+      letter-spacing: 0.01em !important;
+      font-size: 14.28em !important; }
+
+  .desc__wrap {
+    margin-left: 120px !important; }
+    .desc__wrap .desc__info h1 {
+      font-size: 7.85em !important;
+      margin: 30px 0 15px 0 !important; }
+    .desc__wrap .desc__info .desc__p {
+      margin-bottom: 6em !important; }
+      .desc__wrap .desc__info .desc__p p {
+        font-size: 1.57em !important; }
+    .desc__wrap .desc__info a.btn, .desc__wrap .desc__info #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form a#btnForm, #contacts .contacts .cont .contacts__question .contacts__question_form .contacts__form .desc__wrap .desc__info a#btnForm, .desc__wrap .desc__info .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form a#btnMod, .catalogMod .catalogMod__wrap .catalogMod__container .catalogMod__container_elems .catalogMod__container_elem .catalogMod__form .desc__wrap .desc__info a#btnMod {
+      font-size: 16px !important;
+      padding: 1.1em 2.8em; }
+
+  .descriptions p, #contacts .contacts .cont p {
+    font-size: 16px !important; }
+
+  #catalog {
+    box-sizing: border-box; }
+    #catalog .catalog__card {
+      width: 270px !important;
+      height: 441px !important;
+      margin-bottom: 60px !important; }
+      #catalog .catalog__card .catalog__card_item {
+        width: 220px !important;
+        height: 326px !important;
+        padding: 0 !important;
+        padding: 0 25px 25px 25px !important;
+        justify-content: flex-start !important; }
+        #catalog .catalog__card .catalog__card_item .catalog__card_pic {
+          width: 220px !important;
+          height: 220px !important; }
+          #catalog .catalog__card .catalog__card_item .catalog__card_pic img {
+            width: 220px !important; }
+      #catalog .catalog__card .catalog__card_desc {
+        width: 220px !important; }
+        #catalog .catalog__card .catalog__card_desc h3 {
+          font-size: 16px !important; }
+        #catalog .catalog__card .catalog__card_desc p {
+          font-size: 14px !important; }
+      #catalog .catalog__card .catalog__card_order {
+        padding: 0 0 0 25px !important; }
+      #catalog .catalog__card .catalog__card_btn {
+        font-size: 16px !important;
+        width: 150px !important;
+        height: 40px !important; }
+      #catalog .catalog__card .catalog__card_price p {
+        font-size: 18px; }
+
+  #delivery .descriptions, #delivery #contacts .contacts .cont, #contacts .contacts #delivery .cont {
+    margin-bottom: 94px; }
+
+  .delivery__card {
+    width: 270px !important;
+    height: 335px !important; }
+    .delivery__card h3 {
+      font-size: 20px !important;
+      margin-top: 35px !important; }
+    .delivery__card p {
+      font-size: 16px !important; }
+
+  #contacts .pt2 {
+    padding-top: 97px !important; }
+  #contacts .contacts__desc_wrap {
+    margin: 0 !important;
+    width: 100% !important; }
+  #contacts .contacts__desc_bg {
+    max-height: 360px !important; }
+    #contacts .contacts__desc_bg p.bg {
+      font-size: 220px !important;
+      top: 0;
+      right: 0; }
+  #contacts .contacts__desc_text {
+    margin: 0 120px !important; }
+    #contacts .contacts__desc_text h2 {
+      padding-bottom: 54px; }
+  #contacts .contacts__desc_p p, #contacts .contacts__desc_p .contacts__desc_link {
+    padding-top: 15px !important; } }
+@media screen and (max-width: 1439px) {
   .nav {
     width: 50% !important;
     justify-content: flex-end; }

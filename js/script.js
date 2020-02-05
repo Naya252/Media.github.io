@@ -101,43 +101,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibmF5YTI1MiIsImEiOiJjazY1MWI5ODQwa25jM21vN3dvMnJvbDB4In0.ex-oBkf9ssYk4h-xuua1gg'
 }).addTo(mymap);
 
-
-//контакты на мониторах больше 2000px
-// let contacts__question = document.getElementById("contacts__question");
-// let contacts__question_wrap = document.getElementById("contacts__question_wrap");
-// let contacts__desc = document.getElementById("contacts__desc");
-// let contacts__desc_wrap = document.getElementById("contacts__desc_wrap");
-
-// // media query event handler
-// if (matchMedia) {
-//     const mq = window.matchMedia("(min-width: 2000px)");
-//     mq.addListener(WidthChange);
-//     WidthChange(mq);
-// }
-	
-// media query change
-// function WidthChange(mq) {
-// 	if (mq.matches) {
-//         contacts__question.style.width = "50%";
-//         contacts__question.style.maxWidth = "5000px";
-//         contacts__desc.style.width = "50%";
-//         contacts__desc.style.maxWidth = "5000px";
-
-//         contacts__question_wrap.style.maxWidth = "840px";
-//         contacts__desc_wrap.style.maxWidth = "840px";
-
-// 	} else {
-//         contacts__question.style.width = "46%";
-//         contacts__question.style.maxWidth = "1500px";
-//         contacts__desc.style.width = "54%";
-//         contacts__desc.style.maxWidth = "1500px";
-
-//         contacts__question_wrap.style.maxWidth = "765px";
-//         contacts__desc_wrap.style.maxWidth = "915px";
-
-// 	}	
-// }
-
 // плавная прокрутка 
 const anchors = document.querySelectorAll('a.nav__link[href*="#"]');
 let navList = document.getElementById('navList');
@@ -185,6 +148,33 @@ for (let anchor of anchors) {
 //   }	
 // }
 
+
+
+//убираем  отступы у обертки хедера при ширине 1440
+// let wrapperHeader = document.getElementById("wrapperHeader");
+
+// // media query event handler
+// if (matchMedia) {
+//     const mq = window.matchMedia("(max-width: 1440px)");
+//     mq.addListener(WidthChange);
+//     WidthChange(mq);
+// }
+	
+// // media query change
+// function WidthChange(mq) {
+// 	if (mq.matches) {
+//       wrapperHeader.style.width = "100%";
+// 	} else {
+//         contacts__question.style.width = "46%";
+//         contacts__question.style.maxWidth = "1500px";
+//         contacts__desc.style.width = "54%";
+//         contacts__desc.style.maxWidth = "1500px";
+
+//         contacts__question_wrap.style.maxWidth = "765px";
+//         contacts__desc_wrap.style.maxWidth = "915px";
+
+// 	}	
+// }
 
 
 
