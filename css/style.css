@@ -743,7 +743,7 @@ header {
               align-self: flex-end; }
 
 footer {
-  background: #E8D4C9;
+  background: #CBA696;
   width: 100%;
   height: 5.55em; }
   footer .foo {
@@ -1106,7 +1106,8 @@ footer {
         #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text h2 {
           padding: 30px 0 !important; }
         #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p {
-          max-width: 500px !important; }
+          max-width: 500px !important;
+          align-items: flex-start !important; }
           #contacts .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p p {
             padding-top: 0 !important;
             padding-bottom: 8px !important; }
@@ -1119,6 +1120,28 @@ footer {
     padding-top: 10em !important; } }
 @media screen and (max-width: 580px) {
   .wrapper {
-    max-width: 280px !important; } }
+    max-width: 280px !important; }
+
+  #contacts .cont {
+    position: static !important; }
+  #contacts .contacts__question {
+    margin-bottom: 0 !important; }
+  #contacts .contacts__desc_wrap {
+    position: relative !important; }
+
+  footer {
+    height: 166px !important;
+    padding: 17px 0 !important; }
+    footer .wrapper {
+      flex-direction: column !important; }
+      footer .wrapper .foo {
+        margin: 0 !important;
+        flex-direction: column !important;
+        margin-top: 25px !important;
+        justify-content: flex-start; }
+        footer .wrapper .foo .foo__left {
+          text-align: center !important; }
+          footer .wrapper .foo .foo__left p {
+            margin-top: 20px !important; } }
 
 /*# sourceMappingURL=style.css.map */
