@@ -774,6 +774,48 @@ footer {
 
   .contacts__question_wrap, .contacts__desc_wrap {
     max-width: 840px !important; } }
+@media screen and (max-width: 1750px) {
+  #catalog {
+    box-sizing: border-box; }
+    #catalog .catalog__card {
+      width: 270px !important;
+      height: 441px !important;
+      margin-bottom: 30px !important;
+      padding: 30px !important; }
+      #catalog .catalog__card .catalog__card_item {
+        width: 220px !important;
+        height: 326px !important;
+        padding: 0 !important;
+        padding: 0 25px 25px 25px !important;
+        justify-content: flex-start !important; }
+        #catalog .catalog__card .catalog__card_item .catalog__card_pic {
+          width: 220px !important;
+          height: 220px !important; }
+          #catalog .catalog__card .catalog__card_item .catalog__card_pic img {
+            width: 220px !important; }
+      #catalog .catalog__card .catalog__card_desc {
+        width: 220px !important; }
+        #catalog .catalog__card .catalog__card_desc h3 {
+          font-size: 16px !important; }
+        #catalog .catalog__card .catalog__card_desc p {
+          font-size: 14px !important; }
+      #catalog .catalog__card .catalog__card_order {
+        padding: 0 0 0 25px !important; }
+      #catalog .catalog__card .catalog__card_btn {
+        font-size: 16px !important;
+        width: 150px !important;
+        height: 40px !important; }
+      #catalog .catalog__card .catalog__card_price p {
+        font-size: 18px; }
+
+  .delivery__card {
+    width: 270px !important;
+    height: 335px !important; }
+    .delivery__card h3 {
+      font-size: 20px !important;
+      margin-top: 35px !important; }
+    .delivery__card p {
+      font-size: 16px !important; } }
 @media screen and (max-width: 1440px) {
   body {
     font-size: 14px !important; }
@@ -854,49 +896,12 @@ footer {
   .descriptions p, #contacts .contacts .cont p {
     font-size: 16px !important; }
 
-  #catalog {
-    box-sizing: border-box; }
-    #catalog .catalog__card {
-      width: 270px !important;
-      height: 441px !important;
-      margin-bottom: 60px !important; }
-      #catalog .catalog__card .catalog__card_item {
-        width: 220px !important;
-        height: 326px !important;
-        padding: 0 !important;
-        padding: 0 25px 25px 25px !important;
-        justify-content: flex-start !important; }
-        #catalog .catalog__card .catalog__card_item .catalog__card_pic {
-          width: 220px !important;
-          height: 220px !important; }
-          #catalog .catalog__card .catalog__card_item .catalog__card_pic img {
-            width: 220px !important; }
-      #catalog .catalog__card .catalog__card_desc {
-        width: 220px !important; }
-        #catalog .catalog__card .catalog__card_desc h3 {
-          font-size: 16px !important; }
-        #catalog .catalog__card .catalog__card_desc p {
-          font-size: 14px !important; }
-      #catalog .catalog__card .catalog__card_order {
-        padding: 0 0 0 25px !important; }
-      #catalog .catalog__card .catalog__card_btn {
-        font-size: 16px !important;
-        width: 150px !important;
-        height: 40px !important; }
-      #catalog .catalog__card .catalog__card_price p {
-        font-size: 18px; }
+  #catalog .catalog__card {
+    margin-bottom: 60px !important;
+    padding: 0 !important; }
 
   #delivery .descriptions, #delivery #contacts .contacts .cont, #contacts .contacts #delivery .cont {
     margin-bottom: 94px; }
-
-  .delivery__card {
-    width: 270px !important;
-    height: 335px !important; }
-    .delivery__card h3 {
-      font-size: 20px !important;
-      margin-top: 35px !important; }
-    .delivery__card p {
-      font-size: 16px !important; }
 
   #contacts .pt2 {
     padding-top: 97px !important; }
@@ -927,7 +932,16 @@ footer {
   #contacts .contacts__desc_p .contacts__desc_link {
     padding-top: 0 !important;
     font-size: 16px !important; } }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1370px) {
+  .wrapper {
+    max-width: 1130px !important; } }
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    max-width: 1040px !important; } }
+@media screen and (max-width: 1250px) {
+  .wrapper {
+    max-width: 960px !important; } }
+@media screen and (max-width: 1199px) {
   .nav {
     width: 50% !important;
     justify-content: flex-end; }
