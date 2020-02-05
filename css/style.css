@@ -415,7 +415,8 @@ header {
               margin: 0 auto; }
               #contacts .contacts .cont .contacts__desc .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p {
                 display: flex;
-                justify-content: space-between; }
+                justify-content: space-between;
+                align-items: center; }
                 #contacts .contacts .cont .contacts__desc .contacts__desc_wrap .contacts__desc_bg .contacts__desc_text .contacts__desc_p p {
                   display: inline-flex;
                   padding-top: 54px; }
@@ -781,7 +782,7 @@ footer {
     max-width: 1200px !important; }
 
   header .wrapper, footer .wrapper {
-    max-width: 1919px !important; }
+    max-width: 1440px !important; }
 
   footer .wrapper {
     margin: 0 120px !important; }
@@ -790,12 +791,12 @@ footer {
     padding-top: 119px !important; }
 
   .nav__list {
-    width: 800px !important;
+    max-width: 800px !important;
     margin-right: 120px; }
 
   #wrapperHeader {
     width: 100%;
-    max-width: 1920px; }
+    max-width: 1440px; }
 
   .header__logo {
     margin-left: 120px;
@@ -833,7 +834,7 @@ footer {
     height: 44vh !important; }
     .desc__name p {
       bottom: -15% !important;
-      left: 1% !important;
+      left: 0 !important;
       letter-spacing: 0.01em !important;
       font-size: 14.28em !important; }
 
@@ -899,21 +900,33 @@ footer {
 
   #contacts .pt2 {
     padding-top: 97px !important; }
+  #contacts .contacts__desc {
+    width: 49% !important; }
+  #contacts .contacts__question {
+    width: 51% !important; }
   #contacts .contacts__desc_wrap {
     margin: 0 !important;
     width: 100% !important; }
   #contacts .contacts__desc_bg {
-    max-height: 360px !important; }
+    height: 360px !important;
+    max-width: 700px !important;
+    margin-left: 100px !important; }
     #contacts .contacts__desc_bg p.bg {
       font-size: 220px !important;
-      top: 0;
-      right: 0; }
+      top: 45% !important;
+      letter-spacing: 0.08em !important; }
   #contacts .contacts__desc_text {
-    margin: 0 120px !important; }
+    margin: 0 0 0 20px !important;
+    max-width: 460px !important;
+    padding-right: 30px;
+    height: 300px !important; }
     #contacts .contacts__desc_text h2 {
       padding-bottom: 54px; }
-  #contacts .contacts__desc_p p, #contacts .contacts__desc_p .contacts__desc_link {
-    padding-top: 15px !important; } }
+  #contacts .contacts__desc_p p {
+    padding-top: 15px !important; }
+  #contacts .contacts__desc_p .contacts__desc_link {
+    padding-top: 0 !important;
+    font-size: 16px !important; } }
 @media screen and (max-width: 768px) {
   .nav {
     width: 50% !important;
