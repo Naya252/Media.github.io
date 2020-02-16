@@ -233,6 +233,7 @@ header {
         p {
             @extend .constP;
             top: 20%;
+            // bottom: -50%;
             letter-spacing: 0.02em;
             font-size: 320px;
             left: -2%;
@@ -1193,7 +1194,7 @@ footer{
     .desc__name{
 
         p {
-            top: 30% !important;
+            bottom: -30% !important;
             letter-spacing: 0.01em !important;
             font-size: 14.28em !important;
         }
@@ -1310,9 +1311,7 @@ footer{
         p{
             font-size: 16px !important;
         }
-    }
-
-    
+    } 
 
     #catalog{    
         .catalog__card {
@@ -1668,8 +1667,29 @@ footer{
     }
 }
 
+@media screen and (max-width: 760px){
+    .wrapper {
+        width: 580px !important;
+    }
+    #contacts{
+        .contacts__desc_wrap {
+            .contacts__desc_bg {
+                width: 580px !important;
+
+                .contacts__desc_text {
+                    width: 580px !important;
+                    max-width: 580px !important;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 580px) {
     .wrapper {
+        max-width: 280px !important;
+    }
+    header .wrapper, footer .wrapper{
         max-width: 280px !important;
     }
 
@@ -1688,6 +1708,16 @@ footer{
 
         .contacts__desc_wrap {
             position: relative !important;
+
+            .contacts__desc_bg {
+                width: 320px !important;
+
+                .contacts__desc_text {
+                    width: 270px !important;
+                    max-width: 270px !important;
+                    // margin: 0 auto;
+                }
+            }
         }       
     }
     footer {
